@@ -17,6 +17,17 @@ function App() {
         <div className="h-10 w-10 bg-red-400"></div>
         <div className="h-10 w-10 bg-red-400"></div>
         <div className="h-10 w-10 bg-red-400"></div>
+        <div className="m-4 h-10 w-10 bg-red-400"></div>
+        <div>
+          <div className="h-10 w-10 bg-slate-400"></div>
+          <div className="h-10 w-10 bg-slate-400"></div>
+          <div className="h-10 w-10 bg-slate-400"></div>
+          <div className="h-10 w-10 bg-slate-400"></div>
+          <div className="h-10 w-10 bg-red-400"></div>
+          <div className="h-10 w-10 bg-red-400"></div>
+          <div className="h-10 w-10 bg-red-400"></div>
+          <div className="h-10 w-10 bg-red-400"></div>
+        </div>
       </div>
     </>
   );
