@@ -4,8 +4,6 @@ import viteLogo from "/vite.svg";
 
 function App() {
   const [count, setCount] = useState(0);
-  let pawerl = "pawel";
-  let x = 2;
 
   return (
     <>
@@ -15,7 +13,10 @@ function App() {
         <div className="h-10 w-10 bg-slate-400"></div>
         <div className="h-10 w-10 bg-slate-400"></div>
         <div className="h-10 w-10 bg-slate-400"></div>
-        <div className="h-10 w-10 bg-slate-400"></div>
+        <div className="h-10 w-10 bg-red-400"></div>
+        <div className="h-10 w-10 bg-red-400"></div>
+        <div className="h-10 w-10 bg-red-400"></div>
+        <div className="h-10 w-10 bg-red-400"></div>
       </div>
     </>
   );
