@@ -12,7 +12,8 @@ function App() {
   return (
     <>
       {/* hover:m-10 */}
-      <header className="m-4 flex p-5 font-semibold transition-all">
+      <img src={backg} alt="tlo" className="absolute right-0 z-0" />
+      <header className="relative z-10 flex p-5 font-semibold transition-all">
         <nav className="flex w-full items-center justify-around">
           <div className="flex space-x-1">
             <div>
@@ -28,7 +29,7 @@ function App() {
             <div className="">Contact</div>
           </div>
           <div className="py-5">
-            <button className=" bg-white px-5 py-2.5">Sign In</button>
+            <button className="px-5 py-2.5">Sign In</button>
             <button className=" bg-[#ff4d30] px-5 py-2.5 text-white shadow-md shadow-black/30">
               Register
             </button>
@@ -96,7 +97,7 @@ function App() {
           </div>
         </div>
       </div> */}
-      <main className="bg-white/50">
+      <main className="z-10 bg-white/50">
         <article className="mx-5 flex font-bold">
           <div className="flex flex-col justify-center">
             <div className="text-lg">Plan your trip now</div>
@@ -104,21 +105,51 @@ function App() {
               Save <span className="text-[#ff4d30]">big</span> with our car
               rental
             </div>
-            <div className="my-4 text-black/60">
+            <div className="mt-4 w-full text-justify text-black/60">
               Rent the car of your dreams. Unbeatable prices, unlimited miles,
               flexible pick-up options and much more
             </div>
             <div className="flex">
-              <button className="m-7 flex bg-[#ff4d30] p-4 text-white">
-                Book Ride <img className="mx-1 h-4 w-4" src={check} alt="jo" />
+              <button className="m-7 flex gap-2 bg-[#ff4d30] p-4 text-white">
+                Book Ride
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="tabler-icon tabler-icon-circle-check"
+                  className="mr-2"
+                >
+                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                  <path d="M9 12l2 2l4 -4"></path>
+                </svg>
               </button>
-              <button className="m-7 bg-black p-4 text-white">
-                Learn More &#62;
+              <button className="m-7 flex bg-black p-4 text-white">
+                Learn More{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="tabler-icon tabler-icon-chevron-right"
+                >
+                  <path d="M9 6l6 6l-6 6"></path>
+                </svg>
               </button>
             </div>
           </div>
           <div>
-            <img src={volk} alt="volks" />
+            <img src={volk} alt="volks" className="relative z-20" />
           </div>
         </article>
       </main>
