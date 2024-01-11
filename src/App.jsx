@@ -36,67 +36,6 @@ function App() {
           </div>
         </nav>
       </header>
-
-      {/* <div class="mx-auto flex max-w-sm items-center space-x-4 rounded-xl bg-pink-500 p-6 shadow-lg">
-        <div class="shrink-0">
-          <img class="h-12 w-12" src={zdjecie} alt="ChitChat Logo" />
-        </div>
-        <div>
-          <div class="text-xl font-medium text-black">ChitChat</div>
-          <p class="text-slate-500">You have a new message!</p>
-        </div>
-      </div> */}
-
-      {/* <div className="flex h-screen w-full flex-col items-center justify-center bg-purple-300">
-        <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-          1
-        </div>
-        <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-          2
-        </div>
-        <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-          3
-        </div>
-        <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-          4
-        </div>
-
-      </div> */}
-      {/* <div className="h-100 w-100 flex items-center justify-center bg-purple-300">
-        <div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            1
-          </div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            1
-          </div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            1
-          </div>
-        </div>
-        <div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            2
-          </div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            2
-          </div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            2
-          </div>
-        </div>
-        <div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            3
-          </div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            3
-          </div>
-          <div className="m-2 flex h-10 w-10 items-center justify-center bg-black text-white">
-            3
-          </div>
-        </div>
-      </div> */}
       <main className="z-10 bg-white/50">
         <article className="mx-5 flex font-bold">
           <div className="flex flex-col justify-center">
@@ -152,6 +91,361 @@ function App() {
             <img src={volk} alt="volks" className="relative z-20" />
           </div>
         </article>
+        <section className="relative h-screen w-full">
+          <div className="">
+            <form
+              className="m-10 flex flex-col gap-3 p-20 shadow-2xl"
+              action=""
+            >
+              <h2 className="text-2xl font-bold">Book a Car</h2>
+              <div className="flex gap-3">
+                <div className="w-1/3">
+                  <label htmlFor="" for="AutoChoice" className="mb-3 flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"></path>
+                    </svg>
+                    &nbsp; Select Your Car Type
+                  </label>
+                  <select
+                    name=""
+                    id="AutoChoice"
+                    className="w-full  border-2 px-5 py-2"
+                  >
+                    <option>Select your car type</option>
+                    <option value="Audi">Audi</option>
+                    <option value="VW">VW</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes</option>
+                  </select>
+                </div>
+                <div className="w-1/3">
+                  <label htmlFor="" for="PickUpChoice" className="mb-3 flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path
+                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                        fill="currentColor"
+                        stroke-width="0"
+                      ></path>
+                    </svg>
+                    &nbsp; Pick-Up
+                  </label>
+                  <select
+                    name=""
+                    id="PickUpChoice"
+                    className="w-full border-2 px-5 py-2"
+                  >
+                    <option>Select pick up location</option>
+                    <option value="Gdansk">Gdańsk</option>
+                    <option value="Tczew">Tczew</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Wroclaw">Wrocław</option>
+                    <option value="Krakow">Kraków</option>
+                  </select>
+                </div>
+                <div className="w-1/3">
+                  <label htmlFor="" for="DropOffChoice" className="mb-3 flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path
+                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                        fill="currentColor"
+                        stroke-width="0"
+                      ></path>
+                    </svg>
+                    &nbsp; Drop Off
+                  </label>
+                  <select
+                    name=""
+                    id="DropOffChoice"
+                    className="w-full border-2 px-5 py-2"
+                  >
+                    <option>Select drop off location</option>
+                    <option value="Gdansk">Gdańsk</option>
+                    <option value="Tczew">Tczew</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Wroclaw">Wrocław</option>
+                    <option value="Krakow">Kraków</option>
+                  </select>
+                </div>
+              </div>
+              <div className="flex w-full gap-3">
+                <div className="w-1/3">
+                  <label htmlFor="" for="PickUpChoice" className="mb-3 flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                      <path d="M16 3l0 4"></path>
+                      <path d="M8 3l0 4"></path>
+                      <path d="M4 11l16 0"></path>
+                      <path d="M8 15h2v2h-2z"></path>
+                    </svg>
+                    &nbsp; Pick-Up
+                  </label>
+                  <input
+                    type="date"
+                    id="PickUpChoice"
+                    className="w-full border-2 px-5 py-2"
+                  />
+                </div>
+                <div className="w-1/3">
+                  <label htmlFor="" for="DropOffDay" className="mb-3 flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                      <path d="M16 3l0 4"></path>
+                      <path d="M8 3l0 4"></path>
+                      <path d="M4 11l16 0"></path>
+                      <path d="M8 15h2v2h-2z"></path>
+                    </svg>
+                    &nbsp; Drop Off
+                  </label>
+                  <input
+                    type="date"
+                    id="DropOffDay"
+                    className="w-full border-2 px-5 py-2"
+                  />
+                </div>
+                <div className="flex w-1/3 flex-col justify-end shadow-lg">
+                  <button className="h-2/3 w-full bg-[#ff4d30] text-lg font-bold text-white shadow-white">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        {/* <section>
+          <div className="relative m-10 flex bg-slate-300 shadow-2xl">
+            <form className="flex justify-evenly bg-slate-600" action="">
+              <div className="bg-red-600">
+                <h2 className="m-5 text-lg font-bold">Book a Car</h2>
+                <div>
+                  <label htmlFor="" for="AutoChoice" className="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"></path>
+                    </svg>
+                    &nbsp; Select Your Car Type
+                  </label>
+                  <select
+                    name=""
+                    id="AutoChoice"
+                    className="border-2 px-5 py-2"
+                  >
+                    <option>Select your car type</option>
+                    <option value="Audi">Audi</option>
+                    <option value="VW">VW</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes</option>
+                  </select>
+                </div>
+                <div className="flex flex-col">
+                  <label htmlFor="" for="PickUpChoice" className="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                      <path d="M16 3l0 4"></path>
+                      <path d="M8 3l0 4"></path>
+                      <path d="M4 11l16 0"></path>
+                      <path d="M8 15h2v2h-2z"></path>
+                    </svg>
+                    &nbsp; Pick-Up
+                  </label>
+                  <input
+                    type="date"
+                    id="PickUpChoice"
+                    className="border-2 px-5 py-2"
+                  />
+                </div>
+              </div>
+              <div className="bg-red-200">
+                <h2 className="m-5 text-lg font-bold">&nbsp;</h2>
+                <div className="flex flex-col">
+                  <label htmlFor="" for="PickUpChoice" className="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path
+                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                        fill="currentColor"
+                        stroke-width="0"
+                      ></path>
+                    </svg>
+                    &nbsp; Pick Up
+                  </label>
+                  <select
+                    name=""
+                    id="PickUpChoice"
+                    className="border-2 px-5 py-2"
+                  >
+                    <option>Select pick up location</option>
+                    <option value="Gdansk">Gdańsk</option>
+                    <option value="Tczew">Tczew</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Wroclaw">Wrocław</option>
+                    <option value="Krakow">Kraków</option>
+                  </select>
+                </div>
+                <div className="flex flex-col">
+                  <label htmlFor="" for="DropOffDay" className="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                      <path d="M16 3l0 4"></path>
+                      <path d="M8 3l0 4"></path>
+                      <path d="M4 11l16 0"></path>
+                      <path d="M8 15h2v2h-2z"></path>
+                    </svg>
+                    &nbsp; Drop Off
+                  </label>
+                  <input
+                    type="date"
+                    id="DropOffDay"
+                    className="border-2 px-5 py-2"
+                  />
+                </div>
+              </div>
+              <div className="bg-red-400">
+                <div className="flex flex-col">
+                  <label htmlFor="" for="PickUpChoice" className="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="input-icon"
+                    >
+                      <path
+                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                        fill="currentColor"
+                        stroke-width="0"
+                      ></path>
+                    </svg>
+                    &nbsp; Pick-Up
+                  </label>
+                  <select
+                    name=""
+                    id="PickUpChoice"
+                    className="border-2 px-5 py-2"
+                  >
+                    <option>Select pick up location</option>
+                    <option value="Gdansk">Gdańsk</option>
+                    <option value="Tczew">Tczew</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Wroclaw">Wrocław</option>
+                    <option value="Krakow">Kraków</option>
+                  </select>
+                </div>
+                <button className="items-center justify-center px-2 py-10">
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </section> */}
       </main>
     </>
   );
