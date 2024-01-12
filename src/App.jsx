@@ -5,6 +5,9 @@ import zdjecie from "./assets/Logo.png";
 import volk from "./assets/Volks.png";
 import check from "./assets/Check.png";
 import backg from "./assets/BG.png";
+import select from "./assets/Select.jpg";
+import contact from "./assets/Contact.jpg";
+import drive from "./assets/Drive.jpg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -268,184 +271,56 @@ function App() {
               </div>
             </form>
           </div>
-        </section>
-
-        {/* <section>
-          <div className="relative m-10 flex bg-slate-300 shadow-2xl">
-            <form className="flex justify-evenly bg-slate-600" action="">
-              <div className="bg-red-600">
-                <h2 className="m-5 text-lg font-bold">Book a Car</h2>
-                <div>
-                  <label htmlFor="" for="AutoChoice" className="flex">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="input-icon"
-                    >
-                      <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                      <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                      <path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"></path>
-                    </svg>
-                    &nbsp; Select Your Car Type
-                  </label>
-                  <select
-                    name=""
-                    id="AutoChoice"
-                    className="border-2 px-5 py-2"
-                  >
-                    <option>Select your car type</option>
-                    <option value="Audi">Audi</option>
-                    <option value="VW">VW</option>
-                    <option value="Toyota">Toyota</option>
-                    <option value="BMW">BMW</option>
-                    <option value="Mercedes">Mercedes</option>
-                  </select>
-                </div>
-                <div className="flex flex-col">
-                  <label htmlFor="" for="PickUpChoice" className="flex">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="input-icon"
-                    >
-                      <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                      <path d="M16 3l0 4"></path>
-                      <path d="M8 3l0 4"></path>
-                      <path d="M4 11l16 0"></path>
-                      <path d="M8 15h2v2h-2z"></path>
-                    </svg>
-                    &nbsp; Pick-Up
-                  </label>
-                  <input
-                    type="date"
-                    id="PickUpChoice"
-                    className="border-2 px-5 py-2"
-                  />
-                </div>
-              </div>
-              <div className="bg-red-200">
-                <h2 className="m-5 text-lg font-bold">&nbsp;</h2>
-                <div className="flex flex-col">
-                  <label htmlFor="" for="PickUpChoice" className="flex">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="input-icon"
-                    >
-                      <path
-                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-                        fill="currentColor"
-                        stroke-width="0"
-                      ></path>
-                    </svg>
-                    &nbsp; Pick Up
-                  </label>
-                  <select
-                    name=""
-                    id="PickUpChoice"
-                    className="border-2 px-5 py-2"
-                  >
-                    <option>Select pick up location</option>
-                    <option value="Gdansk">Gdańsk</option>
-                    <option value="Tczew">Tczew</option>
-                    <option value="Warszawa">Warszawa</option>
-                    <option value="Wroclaw">Wrocław</option>
-                    <option value="Krakow">Kraków</option>
-                  </select>
-                </div>
-                <div className="flex flex-col">
-                  <label htmlFor="" for="DropOffDay" className="flex">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="input-icon"
-                    >
-                      <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                      <path d="M16 3l0 4"></path>
-                      <path d="M8 3l0 4"></path>
-                      <path d="M4 11l16 0"></path>
-                      <path d="M8 15h2v2h-2z"></path>
-                    </svg>
-                    &nbsp; Drop Off
-                  </label>
-                  <input
-                    type="date"
-                    id="DropOffDay"
-                    className="border-2 px-5 py-2"
-                  />
-                </div>
-              </div>
-              <div className="bg-red-400">
-                <div className="flex flex-col">
-                  <label htmlFor="" for="PickUpChoice" className="flex">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="input-icon"
-                    >
-                      <path
-                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-                        fill="currentColor"
-                        stroke-width="0"
-                      ></path>
-                    </svg>
-                    &nbsp; Pick-Up
-                  </label>
-                  <select
-                    name=""
-                    id="PickUpChoice"
-                    className="border-2 px-5 py-2"
-                  >
-                    <option>Select pick up location</option>
-                    <option value="Gdansk">Gdańsk</option>
-                    <option value="Tczew">Tczew</option>
-                    <option value="Warszawa">Warszawa</option>
-                    <option value="Wroclaw">Wrocław</option>
-                    <option value="Krakow">Kraków</option>
-                  </select>
-                </div>
-                <button className="items-center justify-center px-2 py-10">
-                  Search
-                </button>
-              </div>
-            </form>
+          <div>
+            <div className="flex justify-center pt-20 font-semibold">
+              <h2>Plan your trip now</h2>
+            </div>
+            <div className="flex justify-center p-5 text-5xl font-bold">
+              <h1>Quick & easy car rental</h1>
+            </div>
           </div>
-        </section> */}
+          <div className="flex w-full justify-center gap-20 pl-40 pr-40 pt-10">
+            <div className="flex flex-col items-center">
+              <img src={select} alt="select" />
+              <h2 className="mb-5 text-xl font-bold">Select Car</h2>
+              <p className="text-center text-black/50">
+                We offers a big range of vehicles for all your driving needs. We
+                have the perfect car to meet your needs
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src={contact} alt="contact" />
+              <h2 className="mb-5 text-xl font-bold">Contact Operator</h2>
+              <p className="text-center text-black/50">
+                Our knowledgeable and friendly operators are always ready to
+                help with any questions or concerns
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src={drive} alt="drive" className="mb-5" />
+              <h2 className="mb-5 text-xl font-bold">Let's Drive</h2>
+              <p className="text-center text-black/50">
+                Whether you're hitting the open road, we've got you covered with
+                our wide range of cars
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-center bg-slate-200 p-20">
+            <div>
+              <h2 className="text-center text-lg font-semibold">
+                Vehicle Models
+              </h2>
+              <h1 className="text-center text-4xl font-bold">
+                Our rental fleet
+              </h1>
+              <p className="space-x-10 bg-slate-400 p-10 text-center">
+                Choose from a variety of our amazing vehicles to rent for your
+                next adventure or business trip
+              </p>
+            </div>
+            {/* tutaj kolejny div wleci, tym razem z lista, wiec obczaic jak sie robi liste. 3 kolumny, po lewej lista, srodek to fotka, po prawej rysopis */}
+          </div>
+        </section>
       </main>
     </>
   );
