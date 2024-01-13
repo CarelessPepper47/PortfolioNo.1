@@ -361,7 +361,7 @@ function App() {
             <div className="flex h-[80%] w-1/4 flex-col justify-center gap-2 pl-10 text-xl font-bold">
               <button
                 onClick={() => {
-                  nowaFunkcja(4);
+                  nowaFunkcja(0);
                 }}
                 className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
                 id="auto1"
@@ -369,30 +369,45 @@ function App() {
                 Audi
               </button>
               <button
+                onClick={() => {
+                  nowaFunkcja(1);
+                }}
                 className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
                 id="auto2"
               >
                 VW
               </button>
               <button
+                onClick={() => {
+                  nowaFunkcja(2);
+                }}
                 className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
                 id="auto3"
               >
                 Toyota
               </button>
               <button
+                onClick={() => {
+                  nowaFunkcja(3);
+                }}
                 className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
                 id="auto4"
               >
                 BMW
               </button>
               <button
+                onClick={() => {
+                  nowaFunkcja(4);
+                }}
                 className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
                 id="auto5"
               >
                 Mercedes
               </button>
               <button
+                onClick={() => {
+                  nowaFunkcja(5);
+                }}
                 className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
                 id="auto6"
               >
