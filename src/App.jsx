@@ -8,10 +8,40 @@ import backg from "./assets/BG.png";
 import select from "./assets/Select.jpg";
 import contact from "./assets/Contact.jpg";
 import drive from "./assets/Drive.jpg";
-import auto1 from "./assets/Audi.jpg";
+import models from "./data.js";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [zero, setZero] = useState(0);
+
+  function nowaFunkcja(morel) {
+    setZero(morel);
+  }
+
+  // UCZONKO JS
+
+  // definiowanie zmiennych
+
+  // string
+  let dupa1 = "pięć";
+  // boolean
+  let dupa2 = true;
+  // number
+  let dupa3 = 2;
+  // array
+  let dupa4 = [1, 2, dupa1, true];
+  // object
+  let dupaobject = { klucz1: "wartość", ryj1: "jop", ryj2: "aha" };
+
+  let numer = 0;
+
+  // consolujemy
+
+  console.log(dupa4[2]);
+  console.log(dupaobject);
+  console.log(dupaobject.klucz1);
+  console.log(models[2].year);
+
+  // SAMOCHÓD
 
   return (
     <>
@@ -281,7 +311,7 @@ function App() {
               <h2>Plan your trip now</h2>
             </div>
             <div className="flex justify-center p-5 text-5xl font-bold">
-              <h1>Quick & easy car rental</h1>
+              <h1>{dupaobject.klucz1}</h1>
             </div>
           </div>
           <div className="flex w-full justify-center gap-20 px-20">
@@ -330,6 +360,9 @@ function App() {
             {/* kolumna z przyciskami JS */}
             <div className="flex h-[80%] w-1/4 flex-col justify-center gap-2 pl-10 text-xl font-bold">
               <button
+                onClick={() => {
+                  nowaFunkcja(4);
+                }}
                 className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
                 id="auto1"
               >
@@ -368,42 +401,45 @@ function App() {
             </div>
             {/* kolumna ze zmieniajacymi sie fotkami aut */}
             <div className="m-10 flex h-min w-1/2 justify-center">
-              <img src={auto1} alt="auto1" />
+              <img src={models[zero].img} alt="auto1" />
             </div>
             {/* kolumna z tabelkami */}
             <div className="mx-3 flex h-[80%] w-1/4 flex-col gap-2 pr-10">
               <div className="">
                 <div className="flex items-center justify-center gap-3 bg-[#ff4d30] p-3 text-white">
-                  <span className="text-2xl font-bold">$45</span>/rent per day
+                  <span className="text-2xl font-bold">
+                    ${models[zero].price}
+                  </span>
+                  /rent per day
                 </div>
                 <div className="border-2 border-[#706f7b] border-t-[#ff4d30]">
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
                     <div className="w-1/2">Model</div>
-                    <div className="w-1/2">Audi</div>
+                    <div className="w-1/2">{models[zero].brand}</div>
                   </div>
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
                     <div className="w-1/2">Mark</div>
-                    <div className="w-1/2">A1</div>
+                    <div className="w-1/2">{models[zero].model}</div>
                   </div>
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
                     <div className="w-1/2">Year</div>
-                    <div className="w-1/2">2012</div>
+                    <div className="w-1/2">{models[zero].year}</div>
                   </div>
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
                     <div className="w-1/2">Doors</div>
-                    <div className="w-1/2">4/5</div>
+                    <div className="w-1/2">{models[zero].doors}</div>
                   </div>
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
                     <div className="w-1/2">AC</div>
-                    <div className="w-1/2">Yes</div>
+                    <div className="w-1/2">{models[zero].AC}</div>
                   </div>
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
                     <div className="w-1/2">Transmission</div>
-                    <div className="w-1/2">Manual</div>
+                    <div className="w-1/2">{models[zero].transmission}</div>
                   </div>
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] p-3 text-center">
                     <div className="w-1/2">Fuel</div>
-                    <div className="w-1/2">Gasoline</div>
+                    <div className="w-1/2">{models[zero].fuel}</div>
                   </div>
                 </div>
               </div>
