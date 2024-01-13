@@ -8,6 +8,7 @@ import backg from "./assets/BG.png";
 import select from "./assets/Select.jpg";
 import contact from "./assets/Contact.jpg";
 import drive from "./assets/Drive.jpg";
+import auto1 from "./assets/Audi.jpg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +16,11 @@ function App() {
   return (
     <>
       {/* hover:m-10 */}
-      <img src={backg} alt="tlo" className="absolute right-0 z-0" />
+      <img
+        src={backg}
+        alt="tlo"
+        className="absolute right-0 z-0 hidden md:block"
+      />
       <header className="relative z-10 flex p-5 font-semibold transition-all">
         <nav className="flex w-full items-center justify-around">
           <div className="flex space-x-1">
@@ -39,8 +44,8 @@ function App() {
           </div>
         </nav>
       </header>
-      <main className="z-10 bg-white/50">
-        <article className="mx-5 flex font-bold">
+      <main className="z-10 mt-10 bg-white/50">
+        <article className="mx-5 flex flex-col font-bold md:flex-row">
           <div className="flex flex-col justify-center">
             <div className="text-lg">Plan your trip now</div>
             <div className="text-5xl">
@@ -279,47 +284,134 @@ function App() {
               <h1>Quick & easy car rental</h1>
             </div>
           </div>
-          <div className="flex w-full justify-center gap-20 pl-40 pr-40 pt-10">
-            <div className="flex flex-col items-center">
+          <div className="flex w-full justify-center gap-20 px-20">
+            <div className="flex flex-1 flex-col items-center">
               <img src={select} alt="select" />
               <h2 className="mb-5 text-xl font-bold">Select Car</h2>
-              <p className="text-center text-black/50">
+              <p className="max-w-xs text-center text-black/50">
                 We offers a big range of vehicles for all your driving needs. We
                 have the perfect car to meet your needs
               </p>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-1 flex-col items-center">
               <img src={contact} alt="contact" />
               <h2 className="mb-5 text-xl font-bold">Contact Operator</h2>
-              <p className="text-center text-black/50">
+              <p className="max-w-xs text-center text-black/50">
                 Our knowledgeable and friendly operators are always ready to
                 help with any questions or concerns
               </p>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-1 flex-col items-center">
               <img src={drive} alt="drive" className="mb-5" />
               <h2 className="mb-5 text-xl font-bold">Let's Drive</h2>
-              <p className="text-center text-black/50">
+              <p className="max-w-xs text-center text-black/50">
                 Whether you're hitting the open road, we've got you covered with
                 our wide range of cars
               </p>
             </div>
           </div>
-          <div className="flex justify-center bg-slate-200 p-20">
-            <div>
+          <div className="flex justify-center">
+            <div className="w-1/2 px-20 pt-20">
               <h2 className="text-center text-lg font-semibold">
                 Vehicle Models
               </h2>
               <h1 className="text-center text-4xl font-bold">
                 Our rental fleet
               </h1>
-              <p className="space-x-10 bg-slate-400 p-10 text-center">
+              <p className="space-x-10 px-10 py-5 text-center text-black/50">
                 Choose from a variety of our amazing vehicles to rent for your
                 next adventure or business trip
               </p>
+
+              {/* tutaj kolejny div wleci, tym razem z lista, wiec obczaic jak sie robi liste. 3 kolumny, po lewej lista, srodek to fotka, po prawej rysopis */}
             </div>
-            {/* tutaj kolejny div wleci, tym razem z lista, wiec obczaic jak sie robi liste. 3 kolumny, po lewej lista, srodek to fotka, po prawej rysopis */}
           </div>
+          <section className="flex h-[75vh] w-full items-center">
+            {/* kolumna z przyciskami JS */}
+            <div className="flex h-[80%] w-1/4 flex-col justify-center gap-2 pl-10 text-xl font-bold">
+              <button
+                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                id="auto1"
+              >
+                Audi
+              </button>
+              <button
+                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                id="auto2"
+              >
+                VW
+              </button>
+              <button
+                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                id="auto3"
+              >
+                Toyota
+              </button>
+              <button
+                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                id="auto4"
+              >
+                BMW
+              </button>
+              <button
+                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                id="auto5"
+              >
+                Mercedes
+              </button>
+              <button
+                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                id="auto6"
+              >
+                Passat
+              </button>
+            </div>
+            {/* kolumna ze zmieniajacymi sie fotkami aut */}
+            <div className="m-10 flex h-min w-1/2 justify-center">
+              <img src={auto1} alt="auto1" />
+            </div>
+            {/* kolumna z tabelkami */}
+            <div className="mx-3 flex h-[80%] w-1/4 flex-col gap-2 pr-10">
+              <div className="">
+                <div className="flex items-center justify-center gap-3 bg-[#ff4d30] p-3 text-white">
+                  <span className="text-2xl font-bold">$45</span>/rent per day
+                </div>
+                <div className="border-2 border-[#706f7b] border-t-[#ff4d30]">
+                  <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
+                    <div className="w-1/2">Model</div>
+                    <div className="w-1/2">Audi</div>
+                  </div>
+                  <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
+                    <div className="w-1/2">Mark</div>
+                    <div className="w-1/2">A1</div>
+                  </div>
+                  <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
+                    <div className="w-1/2">Year</div>
+                    <div className="w-1/2">2012</div>
+                  </div>
+                  <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
+                    <div className="w-1/2">Doors</div>
+                    <div className="w-1/2">4/5</div>
+                  </div>
+                  <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
+                    <div className="w-1/2">AC</div>
+                    <div className="w-1/2">Yes</div>
+                  </div>
+                  <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
+                    <div className="w-1/2">Transmission</div>
+                    <div className="w-1/2">Manual</div>
+                  </div>
+                  <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] p-3 text-center">
+                    <div className="w-1/2">Fuel</div>
+                    <div className="w-1/2">Gasoline</div>
+                  </div>
+                </div>
+              </div>
+              <button className="mt-2 bg-[#ff4d30] p-3 text-lg font-bold text-white shadow-[5px_5px_0_0_rgba(0,0,0,.2)] duration-150 hover:brightness-95 active:scale-95 active:shadow-none">
+                RESERVE NOW
+              </button>
+            </div>
+          </section>
         </section>
       </main>
     </>
