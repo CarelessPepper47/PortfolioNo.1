@@ -9,6 +9,7 @@ import select from "./assets/Select.jpg";
 import contact from "./assets/Contact.jpg";
 import drive from "./assets/Drive.jpg";
 import models from "./data.js";
+import tlo2 from "./assets/WiecejTlo.png";
 
 function App() {
   const [zero, setZero] = useState(0);
@@ -51,13 +52,9 @@ function App() {
         alt="tlo"
         className="absolute right-0 z-0 hidden md:block"
       />
-      <header className="relative z-10 flex p-5 font-semibold transition-all">
+      <header className="relative z-10 flex p-5 font-semibold transition-all md:flex-col">
         <nav className="flex w-full items-center justify-around">
-          <div className="flex space-x-1">
-            <div>
-              <img class="w-40" src={zdjecie} alt="Logo" />
-            </div>
-          </div>
+          <img class="w-40" src={zdjecie} alt="Logo" />
           <div className="flex space-x-6 py-8 text-center">
             <div className="">Home</div>
             <div className="">About</div>
@@ -125,7 +122,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div>
+          <div className="">
             <img src={volk} alt="volks" className="relative z-20" />
           </div>
         </article>
@@ -138,7 +135,11 @@ function App() {
               <h2 className="text-2xl font-bold">Book a Car</h2>
               <div className="flex gap-3">
                 <div className="w-1/3">
-                  <label htmlFor="" for="AutoChoice" className="mb-3 flex">
+                  <label
+                    htmlFor=""
+                    for="AutoChoice"
+                    className="mb-3 flex font-semibold"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -160,7 +161,7 @@ function App() {
                   <select
                     name=""
                     id="AutoChoice"
-                    className="w-full  border-2 px-5 py-2"
+                    className="w-full  border-2 px-5 py-2 text-[#ababab]"
                   >
                     <option>Select your car type</option>
                     <option value="Audi">Audi</option>
@@ -171,7 +172,11 @@ function App() {
                   </select>
                 </div>
                 <div className="w-1/3">
-                  <label htmlFor="" for="PickUpChoice" className="mb-3 flex">
+                  <label
+                    htmlFor=""
+                    for="PickUpChoice"
+                    className="mb-3 flex  font-semibold"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -195,7 +200,7 @@ function App() {
                   <select
                     name=""
                     id="PickUpChoice"
-                    className="w-full border-2 px-5 py-2"
+                    className="w-full border-2 px-5 py-2 text-[#ababab]"
                   >
                     <option>Select pick up location</option>
                     <option value="Gdansk">Gdańsk</option>
@@ -206,7 +211,11 @@ function App() {
                   </select>
                 </div>
                 <div className="w-1/3">
-                  <label htmlFor="" for="DropOffChoice" className="mb-3 flex">
+                  <label
+                    htmlFor=""
+                    for="DropOffChoice"
+                    className="mb-3 flex font-semibold"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -230,7 +239,7 @@ function App() {
                   <select
                     name=""
                     id="DropOffChoice"
-                    className="w-full border-2 px-5 py-2"
+                    className="w-full border-2 px-5 py-2 text-[#ababab]"
                   >
                     <option>Select drop off location</option>
                     <option value="Gdansk">Gdańsk</option>
@@ -243,7 +252,11 @@ function App() {
               </div>
               <div className="flex w-full gap-3">
                 <div className="w-1/3">
-                  <label htmlFor="" for="PickUpChoice" className="mb-3 flex">
+                  <label
+                    htmlFor=""
+                    for="PickUpChoice"
+                    className="mb-3 flex  font-semibold"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -267,11 +280,15 @@ function App() {
                   <input
                     type="date"
                     id="PickUpChoice"
-                    className="w-full border-2 px-5 py-2"
+                    className="w-full border-2 px-5 py-2 text-[#ababab]"
                   />
                 </div>
                 <div className="w-1/3">
-                  <label htmlFor="" for="DropOffDay" className="mb-3 flex">
+                  <label
+                    htmlFor=""
+                    for="DropOffDay"
+                    className="mb-3 flex font-semibold"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -295,7 +312,7 @@ function App() {
                   <input
                     type="date"
                     id="DropOffDay"
-                    className="w-full border-2 px-5 py-2"
+                    className="w-full border-2 px-5 py-2  text-[#ababab]"
                   />
                 </div>
                 <div className="flex w-1/3 flex-col justify-end shadow-lg">
@@ -446,7 +463,9 @@ function App() {
                   </div>
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
                     <div className="w-1/2">AC</div>
-                    <div className="w-1/2">{models[zero].AC}</div>
+                    <div className="w-1/2">
+                      {models[zero].AC ? "Yes" : "No"}
+                    </div>
                   </div>
                   <div className="divide-gray flex divide-x-2 divide-solid divide-[#706f7b] border-b-2 border-[#706f7b] p-3 text-center">
                     <div className="w-1/2">Transmission</div>
@@ -462,6 +481,20 @@ function App() {
                 RESERVE NOW
               </button>
             </div>
+          </section>
+          <section className="my-20 w-full">
+            <div className="flex h-[30vh] flex-col items-center justify-center gap-5 bg-[#2d2d2d]">
+              <h1 className="text-6xl font-bold text-white">
+                Save big with our cheap car rental!
+              </h1>
+              <p className="text-3xl text-white">
+                Top Airports. Local Suppliers.{" "}
+                <span className="text-[#ff4d30]">24/7</span> Support.
+              </p>
+            </div>
+          </section>
+          <section className="flex w-full justify-center">
+            <img src={tlo2} alt="tlo2" />
           </section>
         </section>
       </main>
