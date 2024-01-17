@@ -14,6 +14,8 @@ import ccd from "./assets/CCD.jpg";
 import nhc from "./assets/NHC.jpg";
 import aip from "./assets/AIP.jpg";
 import sladyopon from "./assets/SladyOpon.png";
+import heri from "./assets/Heri.jpg";
+import ron from "./assets/Ron.jpg";
 
 function App() {
   const [zero, setZero] = useState(0);
@@ -87,7 +89,7 @@ function App() {
           </div>
         </nav>
       </header>
-      <main className="z-10 mt-10 bg-white/50">
+      <main className="z-10 mt-10">
         <article className="mx-5 flex flex-col font-bold md:flex-row">
           <div className="flex flex-col justify-center">
             <div className="text-lg">Plan your trip now</div>
@@ -139,11 +141,14 @@ function App() {
             </div>
           </div>
           <div className="">
-            <img src={volk} alt="volks" className="relative z-20" />
+            <img src={volk} alt="volks" className="relative" />
           </div>
         </article>
         <section className="relative h-screen w-full">
-          <form className="m-10 flex flex-col gap-3 p-20 shadow-2xl" action="">
+          <form
+            className="m-10 mb-20 flex flex-col gap-3 p-20 shadow-2xl"
+            action=""
+          >
             <h2 className="text-2xl font-bold">Book a Car</h2>
             <div className="flex gap-3">
               <div className="w-1/3">
@@ -334,14 +339,15 @@ function App() {
               </div>
             </div>
           </form>
-          <div>
-            <div className="flex justify-center pt-20 font-semibold">
-              <h2>Plan your trip now</h2>
-            </div>
-            <div className="flex justify-center p-5 text-5xl font-bold">
-              <h1>{dupaobject.klucz1}</h1>
-            </div>
+          <div className="mb-20">
+            <h2 className="text-center text-2xl font-semibold">
+              Plan your trip now
+            </h2>
+            <h1 className="text-center text-5xl font-bold">
+              Quick & easy car rental
+            </h1>
           </div>
+
           <div className="flex w-full justify-center gap-20 px-20">
             <div className="flex flex-1 flex-col items-center">
               <img src={select} alt="select" />
@@ -368,8 +374,8 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="w-1/2 px-20 pt-20">
+          <div className="mt-20 flex justify-center">
+            <div className="w-1/2 px-20">
               <h2 className="text-center text-lg font-semibold">
                 Vehicle Models
               </h2>
@@ -493,21 +499,18 @@ function App() {
               </button>
             </div>
           </section>
-          <section className="my-20 w-full">
-            <div className="flex h-[30vh] flex-col items-center justify-center gap-5 bg-[#2d2d2d]">
-              <h1 className="text-6xl font-bold text-white">
-                Save big with our cheap car rental!
-              </h1>
-              <p className="text-3xl text-white">
-                Top Airports. Local Suppliers.{" "}
-                <span className="text-[#ff4d30]">24/7</span> Support.
-              </p>
-            </div>
+          <section className="flex h-[30vh] flex-col items-center justify-center gap-5 bg-[#2d2d2d]">
+            <h1 className="text-6xl font-bold text-white">
+              Save big with our cheap car rental!
+            </h1>
+            <p className="text-3xl text-white">
+              Top Airports. Local Suppliers.{" "}
+              <span className="text-[#ff4d30]">24/7</span> Support.
+            </p>
           </section>
 
-          <img src={tlo2} alt="tlo2" className="mx-auto" />
-          <img src={sladyopon} alt="sladyopon" className="absolute z-10" />
-          <div className="flex h-[60vh] bg-red-100">
+          <img src={tlo2} alt="tlo2" className="mx-auto my-10" />
+          <div className="flex">
             <div className="w-1/2 gap-5 pl-40">
               <h2 className="text-xl font-bold">Why Choose Us</h2>
               <h1 className="text-5xl font-bold">
@@ -540,6 +543,16 @@ function App() {
               </button>
             </div>
             <div className="w-1/2 space-y-10">
+              {/* <img
+                src={sladyopon}
+                alt="sladyopon"
+                className="absolute bottom-20 z-0"
+              />
+              <img
+                src={sladyopon}
+                alt="sladyopon"
+                className="absolute bottom-20 left-0 z-0"
+              /> */}
               <div className="flex gap-3 px-20">
                 <img src={ccd} alt="ccd" />
                 <div>
@@ -572,7 +585,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="h-sceen flex w-full flex-col bg-blue-100">
+          <div className="h-sceen mt-10 flex w-full flex-col bg-[#f8f8f8] pb-40 pt-20">
             <div className="mx-auto w-1/2 text-center">
               <h2 className="text-xl font-bold">Reviewed by People</h2>
               <h1 className="text-5xl font-bold">Client's Testimonials</h1>
@@ -583,8 +596,71 @@ function App() {
                 positive experiences with you.
               </p>
             </div>
-            <div className=""></div>
-            <div className=""></div>
+            <div className="relative z-20 flex justify-center gap-5">
+              <div className="ml-[10%] mt-20 h-[45vh] w-[60%] border-white bg-white p-10 text-left text-xl shadow-md">
+                <p className="mt-5 font-semibold">
+                  "We rented a car from this website and had an amazing
+                  experience! The booking was easy and the rental rates were
+                  very affordable. "
+                </p>
+                <div className="mt-20 flex justify-around gap-20">
+                  <div className="flex">
+                    <img src={heri} alt="heri" className="w-20 rounded-full" />
+                    <div className="ml-5  mt-3">
+                      <h1 className="font-bold">Heri Porter</h1>
+                      <p className="text-[16px]">Pruszcz Gdański</p>
+                    </div>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="tabler-icon tabler-icon-quote"
+                    className="mt-3  text-[#ff4d30]"
+                  >
+                    <path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"></path>
+                    <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"></path>
+                  </svg>
+                </div>
+              </div>
+              <div className="mr-[10%] mt-20 h-[45vh] w-[60%] border-white bg-white p-10 text-left text-xl shadow-md">
+                <p className="mt-5 font-semibold">
+                  "The car was in great condition and made our trip even better.
+                  Highly recommend for this car rental website!"
+                </p>
+                <div className="mt-20 flex justify-around gap-20">
+                  <div className="flex">
+                    <img src={ron} alt="ron" className="w-20 rounded-full" />
+                    <div className="ml-5 mt-3">
+                      <h1 className="font-bold">Roland Wololo</h1>
+                      <p className="text-[16px]">Wroclove</p>
+                    </div>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="tabler-icon tabler-icon-quote"
+                    className="mt-3  text-[#ff4d30]"
+                  >
+                    <path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"></path>
+                    <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
