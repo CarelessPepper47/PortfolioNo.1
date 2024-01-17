@@ -1,8 +1,5 @@
-# React + Vite
+Front End portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://portfolio-no-1.vercel.app/ 1. Car Rental project, basically copy of other site, just to train myself.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+tech stack: React, JavaScript, HTML, TailwindCSS
