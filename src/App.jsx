@@ -144,7 +144,7 @@ function App() {
             <img src={volk} alt="volks" className="relative" />
           </div>
         </article>
-        <section className="relative h-screen w-full">
+        <section className="relative h-fit w-full">
           <form
             className="m-10 mb-20 flex flex-col gap-3 p-20 shadow-2xl"
             action=""
@@ -390,7 +390,7 @@ function App() {
               {/* tutaj kolejny div wleci, tym razem z lista, wiec obczaic jak sie robi liste. 3 kolumny, po lewej lista, srodek to fotka, po prawej rysopis */}
             </div>
           </div>
-          <section className="flex h-[75vh] w-full items-center">
+          <section className="flex h-[70vh] w-full items-center">
             {/* kolumna z przyciskami JS */}
             <div className="flex h-[80%] w-1/4 flex-col justify-center gap-2 pl-10 text-xl font-bold">
               <button
@@ -510,7 +510,12 @@ function App() {
           </section>
 
           <img src={tlo2} alt="tlo2" className="mx-auto my-10" />
-          <div className="flex">
+          <div className="relative flex">
+            <img
+              src={sladyopon}
+              alt="sladyopon"
+              className="absolute -top-[300px] z-0 h-[738px] w-[80%]"
+            />
             <div className="w-1/2 gap-5 pl-40">
               <h2 className="text-xl font-bold">Why Choose Us</h2>
               <h1 className="text-5xl font-bold">
@@ -585,7 +590,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="h-sceen mt-10 flex w-full flex-col bg-[#f8f8f8] pb-40 pt-20">
+          <div className="mt-10 flex h-fit w-full flex-col bg-[#f8f8f8] pb-40 pt-20">
             <div className="mx-auto w-1/2 text-center">
               <h2 className="text-xl font-bold">Reviewed by People</h2>
               <h1 className="text-5xl font-bold">Client's Testimonials</h1>
@@ -660,6 +665,53 @@ function App() {
                   </svg>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="flex h-screen w-full flex-col items-center bg-white">
+          <div className="space-y-10 text-center">
+            <h5 className="text-lg font-bold">FAQ</h5>
+            <h1 className="text-5xl font-bold">Frequently Asked Questions</h1>
+            <p className="mx-auto w-[80%]">
+              Frequently Asked Questions About the Car Rental Booking Process on
+              Our Website: Answers to Common Concerns and Inquiries.
+            </p>
+          </div>
+          <div className="flex flex-col">
+            <button className="">
+              1.What is special about comparing rental car deals?
+              <div className="hidden">
+                Comparing rental car deals is important as it helps find the
+                best deal that fits your budget and requirements, ensuring you
+                get the most value for your money. By comparing various options,
+                you can find deals that offer lower prices, additional services,
+                or better car models. You can find car rental deals by
+                researching online and comparing prices from different rental
+                companies.
+              </div>
+            </button>
+            <button className="">
+              2. How do I find the car rental deals?
+              <div className="hidden">
+                You can find car rental deals by researching online and
+                comparing prices from different rental companies. Websites such
+                as Expedia, Kayak, and Travelocity allow you to compare prices
+                and view available rental options. It is also recommended to
+                sign up for email newsletters and follow rental car companies on
+                social media to be informed of any special deals or promotions.
+              </div>
+            </button>
+            <button className="">
+              3. How do I find such low rental car prices?
+            </button>
+            <div className="hidden">
+              Book in advance: Booking your rental car ahead of time can often
+              result in lower prices. Compare prices from multiple companies:
+              Use websites like Kayak, Expedia, or Travelocity to compare prices
+              from multiple rental car companies. Look for discount codes and
+              coupons: Search for discount codes and coupons that you can use to
+              lower the rental price. Renting from an off-airport location can
+              sometimes result in lower prices.
             </div>
           </div>
         </section>
