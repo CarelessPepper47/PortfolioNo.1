@@ -99,20 +99,20 @@ function App() {
           </div>
         </nav>
       </header>
-      <main className="z-10 mt-10">
+      <main className="z-10 mt-10 bg-[#FFF]">
         <article className="mx-5 flex flex-col font-bold md:flex-row">
-          <div className="flex flex-col justify-center">
+          <div className="ml-10 flex flex-col justify-center">
             <div className="text-lg">Plan your trip now</div>
             <div className="text-5xl">
               Save <span className="text-[#ff4d30]">big</span> with our car
               rental
             </div>
-            <div className="mt-4 w-full text-justify text-black/60">
+            <div className="mt-4 w-full text-justify font-medium text-black/60">
               Rent the car of your dreams. Unbeatable prices, unlimited miles,
               flexible pick-up options and much more
             </div>
-            <div className="flex">
-              <button className="m-7 flex gap-2 bg-[#ff4d30] p-4 text-white">
+            <div className="mt-10 flex gap-10">
+              <button className="flex gap-2 bg-[#ff4d30] p-6 text-white">
                 Book Ride
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +131,7 @@ function App() {
                   <path d="M9 12l2 2l4 -4"></path>
                 </svg>
               </button>
-              <button className="m-7 flex bg-black p-4 text-white">
+              <button className="flex bg-black p-6 text-white">
                 Learn More{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -509,14 +509,16 @@ function App() {
               </button>
             </div>
           </section>
-          <section className="flex h-[30vh] flex-col items-center justify-center gap-5 bg-[#2d2d2d]">
-            <h1 className="text-6xl font-bold text-white">
-              Save big with our cheap car rental!
-            </h1>
-            <p className="text-3xl text-white">
-              Top Airports. Local Suppliers.{" "}
-              <span className="text-[#ff4d30]">24/7</span> Support.
-            </p>
+          <section className="flex h-fit flex-col items-center justify-center gap-5 bg-[#2d2d2d]">
+            <div className="py-[45px]">
+              <h1 className="text-6xl font-bold text-white">
+                Save big with our cheap car rental!
+              </h1>
+              <p className="text-3xl text-white">
+                Top Airports. Local Suppliers.{" "}
+                <span className="text-[#ff4d30]">24/7</span> Support.
+              </p>
+            </div>
           </section>
 
           <img src={tlo2} alt="tlo2" className="mx-auto my-10" />
@@ -612,7 +614,7 @@ function App() {
               </p>
             </div>
             <div className="relative z-20 flex justify-center gap-5">
-              <div className="ml-[10%] mt-20 h-[45vh] w-[60%] border-white bg-white p-10 text-left text-xl shadow-md">
+              <div className="ml-[10%] mt-20 h-fit w-[60%] border-white bg-white p-10 text-left text-xl shadow-md">
                 <p className="mt-5 font-semibold">
                   "We rented a car from this website and had an amazing
                   experience! The booking was easy and the rental rates were
@@ -644,7 +646,7 @@ function App() {
                   </svg>
                 </div>
               </div>
-              <div className="mr-[10%] mt-20 h-[45vh] w-[60%] border-white bg-white p-10 text-left text-xl shadow-md">
+              <div className="mr-[10%] mt-20 h-fit w-[60%] border-white bg-white p-10 text-left text-xl shadow-md">
                 <p className="mt-5 font-semibold">
                   "The car was in great condition and made our trip even better.
                   Highly recommend for this car rental website!"
