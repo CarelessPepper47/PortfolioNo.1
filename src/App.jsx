@@ -16,6 +16,7 @@ import aip from "./assets/AIP.jpg";
 import sladyopon from "./assets/SladyOpon.png";
 import heri from "./assets/Heri.jpg";
 import ron from "./assets/Ron.jpg";
+import faqcar from "./assets/faqcar.png";
 
 function App() {
   const [zero, setZero] = useState(0);
@@ -25,7 +26,16 @@ function App() {
   }
 
   // !!!!!!!!!!!!!!!!!!!!! robienie przyciskow toggle do faq
+  const [isToggled, setToggle] = useState(false);
+  const handleToggle = () => {
+    setToggle(!isToggled);
+  };
 
+  function rozwinFaq() {
+    setToggle(!isToggled);
+
+    return <button onClick={handleToggle}>{isToggled ? "ON" : "OFF"}</button>;
+  }
   // const toggleFaq = () => {
   //   const [isToggled, setToggle] = useState(false);
 
@@ -668,18 +678,27 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="flex h-screen w-full flex-col items-center bg-white">
+        <section className="relative z-10 flex h-screen w-full flex-col items-center gap-20 bg-white">
           <div className="space-y-10 text-center">
-            <h5 className="text-lg font-bold">FAQ</h5>
+            <h5 className="pt-20 text-2xl font-bold">FAQ</h5>
             <h1 className="text-5xl font-bold">Frequently Asked Questions</h1>
             <p className="mx-auto w-[80%]">
               Frequently Asked Questions About the Car Rental Booking Process on
               Our Website: Answers to Common Concerns and Inquiries.
             </p>
           </div>
-          <div className="flex flex-col">
-            <button className="">
-              1.What is special about comparing rental car deals?
+          <div className="relative z-10 flex w-[60%] flex-col bg-white shadow-md shadow-black/50">
+            {/* <button
+                onClick={() => {
+                  nowaFunkcja(3);
+                }} */}
+            <button
+              onClick={() => {
+                rozwinFaq;
+              }}
+              className="flex h-20 items-center justify-between px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white"
+            >
+              1. What is special about comparing rental car deals?
               <div className="hidden">
                 Comparing rental car deals is important as it helps find the
                 best deal that fits your budget and requirements, ensuring you
@@ -689,8 +708,23 @@ function App() {
                 researching online and comparing prices from different rental
                 companies.
               </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="tabler-icon tabler-icon-chevron-down"
+                className=""
+              >
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
             </button>
-            <button className="">
+            <button className="flex h-20 items-center  justify-between px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white">
               2. How do I find the car rental deals?
               <div className="hidden">
                 You can find car rental deals by researching online and
@@ -700,20 +734,55 @@ function App() {
                 sign up for email newsletters and follow rental car companies on
                 social media to be informed of any special deals or promotions.
               </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="tabler-icon tabler-icon-chevron-down"
+                className=""
+              >
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
             </button>
-            <button className="">
+            <button className="flex h-20 items-center justify-between px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30]  active:text-white">
               3. How do I find such low rental car prices?
+              <div className="hidden">
+                Book in advance: Booking your rental car ahead of time can often
+                result in lower prices. Compare prices from multiple companies:
+                Use websites like Kayak, Expedia, or Travelocity to compare
+                prices from multiple rental car companies. Look for discount
+                codes and coupons: Search for discount codes and coupons that
+                you can use to lower the rental price. Renting from an
+                off-airport location can sometimes result in lower prices.
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="tabler-icon tabler-icon-chevron-down"
+                className=""
+              >
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
             </button>
-            <div className="hidden">
-              Book in advance: Booking your rental car ahead of time can often
-              result in lower prices. Compare prices from multiple companies:
-              Use websites like Kayak, Expedia, or Travelocity to compare prices
-              from multiple rental car companies. Look for discount codes and
-              coupons: Search for discount codes and coupons that you can use to
-              lower the rental price. Renting from an off-airport location can
-              sometimes result in lower prices.
-            </div>
           </div>
+          <img
+            src={faqcar}
+            alt="faqcar"
+            className="absolute left-0 top-72 z-0"
+          />
         </section>
       </main>
     </>
