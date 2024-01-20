@@ -402,7 +402,7 @@ function App() {
           </div>
           <section className="mb-20 flex h-fit w-full items-center">
             {/* kolumna z przyciskami JS */}
-            <div className="flex h-[80%] w-1/4 flex-col justify-center gap-2 pl-10 text-xl font-bold">
+            <div className="flex h-fit w-1/4 flex-col justify-center gap-2 pl-10 text-xl font-bold">
               <button
                 onClick={() => {
                   nowaFunkcja(0);
