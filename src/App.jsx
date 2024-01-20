@@ -463,7 +463,7 @@ function App() {
               <img src={models[zero].img} alt="auto1" />
             </div>
             {/* kolumna z tabelkami */}
-            <div className="mx-3 flex h-[80%] w-1/4 flex-col gap-2 pr-10">
+            <div className="mx-3 flex h-fit w-1/4 flex-col gap-2 pr-10">
               <div className="">
                 <div className="flex items-center justify-center gap-3 bg-[#ff4d30] p-3 text-white">
                   <span className="text-2xl font-bold">
