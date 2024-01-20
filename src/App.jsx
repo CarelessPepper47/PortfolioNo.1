@@ -400,7 +400,7 @@ function App() {
               {/* tutaj kolejny div wleci, tym razem z lista, wiec obczaic jak sie robi liste. 3 kolumny, po lewej lista, srodek to fotka, po prawej rysopis */}
             </div>
           </div>
-          <section className="flex h-[70vh] w-full items-center">
+          <section className="mb-20 flex h-fit w-full items-center">
             {/* kolumna z przyciskami JS */}
             <div className="flex h-[80%] w-1/4 flex-col justify-center gap-2 pl-10 text-xl font-bold">
               <button
