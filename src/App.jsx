@@ -103,7 +103,7 @@ function App() {
         </nav>
       </header>
       <main className="z-10 mt-10 bg-[#FFF]">
-        <article className="flex flex-col font-bold md:flex-row lg:mx-5">
+        <article className="mb-10 flex flex-col font-bold md:flex-row lg:mx-5 lg:mb-0">
           <div className="flex flex-col justify-center lg:ml-10">
             <div className="text-lg">Plan your trip now</div>
             <div className="text-5xl">
@@ -157,7 +157,7 @@ function App() {
             <img src={volk} alt="volks" className="relative hidden lg:flex" />
           </div>
         </article>
-        <section className="relative h-fit w-full sm:text-center">
+        <section className="relative h-fit w-full">
           <form
             className="flex flex-col gap-3 shadow-2xl lg:m-10 lg:mb-20 lg:p-20"
             action=""
@@ -346,7 +346,7 @@ function App() {
                 />
               </div>
               <div className="flex flex-col justify-end shadow-lg sm:h-[10vh] sm:w-full lg:w-1/3">
-                <button className="h-2/3 w-full bg-[#ff4d30] text-lg font-bold text-white shadow-white">
+                <button className="h-2/3 w-full bg-[#ff4d30] py-5 text-lg font-bold text-white shadow-white lg:py-0">
                   Search
                 </button>
               </div>
@@ -573,31 +573,37 @@ function App() {
                 alt="sladyopon"
                 className="absolute bottom-20 left-0 z-0"
               /> */}
-              <div className="flex gap-3 px-20">
+              <div className="flex flex-col gap-3 px-20 lg:flex-row">
                 <img src={ccd} alt="ccd" />
                 <div>
-                  <h1 className="text-2xl font-bold">Cross Country Drive</h1>
-                  <p className="w-[75%] text-[#706f7b]">
+                  <h1 className="text-center text-2xl font-bold lg:text-left">
+                    Cross Country Drive
+                  </h1>
+                  <p className="text-center text-[#706f7b] lg:w-[75%] lg:text-left">
                     Take your driving experience to the next level with our
                     top-notch vehicles for your cross-country adventures.
                   </p>
                 </div>
               </div>
-              <div className="flex gap-3 px-20">
+              <div className="flex  flex-col gap-3 px-20 lg:flex-row">
                 <img src={aip} alt="aip" />
                 <div>
-                  <h1 className="text-2xl font-bold">All Inclusive Pricing</h1>
-                  <p className="w-[77%] text-[#706f7b]">
+                  <h1 className="text-center text-2xl font-bold lg:text-left">
+                    All Inclusive Pricing
+                  </h1>
+                  <p className="text-center text-[#706f7b] lg:w-[77%] lg:text-left">
                     Get everything you need in one convenient, transparent price
                     with our all-inclusive pricing policy.
                   </p>
                 </div>
               </div>
-              <div className="flex gap-3 px-20">
+              <div className="flex  flex-col gap-3 px-20 lg:flex-row">
                 <img src={nhc} alt="nhc" />
                 <div>
-                  <h1 className="text-2xl font-bold">No Hidden Charges</h1>
-                  <p className="w-[75%] text-[#706f7b]">
+                  <h1 className="text-center text-2xl font-bold lg:text-left">
+                    No Hidden Charges
+                  </h1>
+                  <p className="text-center text-[#706f7b] lg:w-[75%] lg:text-left">
                     Enjoy peace of mind with our no hidden charges policy. We
                     believe in transparent and honest pricing.
                   </p>
