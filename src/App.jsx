@@ -156,7 +156,7 @@ function App() {
               flexible pick-up options and much more
             </div>
             <div className="mt-10 flex flex-col gap-5 lg:flex-row">
-              <button className="flex justify-center gap-2 rounded bg-[#ff4d30] p-6 text-white">
+              <button className="flex justify-center gap-2 bg-[#ff4d30] p-6 text-white lg:rounded">
                 Book Ride
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ function App() {
                   <path d="M9 12l2 2l4 -4"></path>
                 </svg>
               </button>
-              <button className="flex justify-center rounded bg-black p-6 text-white">
+              <button className="git flex justify-center bg-black p-6 text-white lg:rounded">
                 Learn More{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
