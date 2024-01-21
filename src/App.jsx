@@ -17,6 +17,7 @@ import sladyopon from "./assets/SladyOpon.png";
 import heri from "./assets/Heri.jpg";
 import ron from "./assets/Ron.jpg";
 import faqcar from "./assets/faqcar.png";
+import droga from "./assets/Droga.png";
 
 function App() {
   const [zero, setZero] = useState(0);
@@ -79,6 +80,7 @@ function App() {
     <>
       {/* hover:m-10 */}
       <img
+        id="home"
         src={backg}
         alt="tlo"
         className="absolute right-0 z-0 hidden lg:block "
@@ -103,9 +105,29 @@ function App() {
         </nav>
       </header>
       <main className="z-10 mt-10 bg-[#FFF]">
+        <button className="fixed bottom-0 right-0 z-20 m-10 rounded-full bg-[#ff4d30] p-1 text-white">
+          <a href="#home">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-to-line"
+            >
+              <path d="M5 3h14" />
+              <path d="m18 13-6-6-6 6" />
+              <path d="M12 7v14" />
+            </svg>
+          </a>
+        </button>
         <article className="mb-10 flex flex-col font-bold md:flex-row lg:mx-5 lg:mb-0">
           <div className="flex flex-col justify-center lg:ml-10">
-            <div className="text-lg">Plan your trip now</div>
+            <div className="text-3xl">Plan your trip now</div>
             <div className="text-5xl">
               Save <span className="text-[#ff4d30]">big</span> with our car
               rental
@@ -162,7 +184,7 @@ function App() {
             className="flex flex-col gap-3 shadow-2xl lg:m-10 lg:mb-20 lg:p-20"
             action=""
           >
-            <h2 className="text-2xl font-bold">Book a Car</h2>
+            <h2 className="text-2xl font-bold lg:mb-2">Book a Car</h2>
             <div className="flex flex-col gap-3 lg:flex-row">
               <div className="lg:w-1/3">
                 <label
@@ -405,61 +427,65 @@ function App() {
           </div>
           <section className="mb-20 flex h-fit w-full flex-col items-center lg:flex-row">
             {/* kolumna z przyciskami JS */}
-            <div className="flex h-fit w-1/4 justify-center gap-2 bg-blue-300 text-xl font-bold lg:flex-col lg:pl-10">
-              <button
-                onClick={() => {
-                  nowaFunkcja(0);
-                }}
-                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
-                id="auto1"
-              >
-                Audi
-              </button>
-              <button
-                onClick={() => {
-                  nowaFunkcja(1);
-                }}
-                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
-                id="auto2"
-              >
-                VW
-              </button>
-              <button
-                onClick={() => {
-                  nowaFunkcja(2);
-                }}
-                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
-                id="auto3"
-              >
-                Toyota
-              </button>
-              <button
-                onClick={() => {
-                  nowaFunkcja(3);
-                }}
-                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
-                id="auto4"
-              >
-                BMW
-              </button>
-              <button
-                onClick={() => {
-                  nowaFunkcja(4);
-                }}
-                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
-                id="auto5"
-              >
-                Mercedes
-              </button>
-              <button
-                onClick={() => {
-                  nowaFunkcja(5);
-                }}
-                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
-                id="auto6"
-              >
-                Passat
-              </button>
+            <div className="flex h-fit w-full flex-col gap-2 px-3 text-xl font-bold lg:w-1/4 lg:flex-col lg:justify-center lg:px-0 lg:pl-10">
+              <div className="flex justify-between gap-2 lg:flex-col">
+                <button
+                  onClick={() => {
+                    nowaFunkcja(0);
+                  }}
+                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                  id="auto1"
+                >
+                  Audi
+                </button>
+                <button
+                  onClick={() => {
+                    nowaFunkcja(1);
+                  }}
+                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  id="auto2"
+                >
+                  VW
+                </button>
+                <button
+                  onClick={() => {
+                    nowaFunkcja(2);
+                  }}
+                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  id="auto3"
+                >
+                  Toyota
+                </button>
+              </div>
+              <div className="flex justify-between gap-2 lg:flex-col">
+                <button
+                  onClick={() => {
+                    nowaFunkcja(3);
+                  }}
+                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  id="auto4"
+                >
+                  BMW
+                </button>
+                <button
+                  onClick={() => {
+                    nowaFunkcja(4);
+                  }}
+                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  id="auto5"
+                >
+                  Mercedes
+                </button>
+                <button
+                  onClick={() => {
+                    nowaFunkcja(5);
+                  }}
+                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  id="auto6"
+                >
+                  Passat
+                </button>
+              </div>
             </div>
             {/* kolumna ze zmieniajacymi sie fotkami aut */}
             <div className="m-10 flex h-min justify-center lg:w-1/2">
@@ -848,7 +874,9 @@ function App() {
             className="absolute left-0 top-72 z-0"
           />
         </section>
-        <footer className="h-screen w-full bg-blue-600"></footer>
+        <footer className="h-screen w-full">
+          <img src={droga} alt="droga" className="absolute w-full" />
+        </footer>
       </main>
     </>
   );
