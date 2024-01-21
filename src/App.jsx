@@ -95,6 +95,25 @@ function App() {
             <div className="">Testimonials</div>
             <div className="">Our Team</div>
             <div className="">Contact</div>
+            <div>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-eclipse"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a7 7 0 1 0 10 10" />
+                </svg>
+              </button>
+            </div>
           </div>
           <div className="py-5">
             <button className="px-5 py-2.5">Sign In</button>
@@ -105,7 +124,7 @@ function App() {
         </nav>
       </header>
       <main className="z-10 mt-10 bg-[#FFF]">
-        <button className="fixed bottom-0 right-0 z-20 m-10 rounded-full bg-[#ff4d30] p-1 text-white">
+        <button className="fixed bottom-0 right-0 z-30 m-10 scale-75 rounded-full bg-[#ff4d30] p-1 text-white lg:scale-100">
           <a href="#home">
             <svg
               xmlns="http://www.w3.org/2000/svg"
