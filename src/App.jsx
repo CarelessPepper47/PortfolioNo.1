@@ -146,12 +146,12 @@ function App() {
         </button>
         <article className="mb-10 flex flex-col font-bold md:flex-row lg:mx-5 lg:mb-0">
           <div className="flex flex-col justify-center lg:ml-10">
-            <div className="text-3xl">Plan your trip now</div>
-            <div className="text-5xl">
+            <div className="m-3 text-3xl">Plan your trip now</div>
+            <div className="m-3 text-5xl">
               Save <span className="text-[#ff4d30]">big</span> with our car
               rental
             </div>
-            <div className="mt-4 w-full text-left font-medium text-black/60">
+            <div className="m-3 mt-4 w-full text-left font-medium text-black/60">
               Rent the car of your dreams. Unbeatable prices, unlimited miles,
               flexible pick-up options and much more
             </div>
