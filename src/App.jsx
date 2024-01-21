@@ -26,9 +26,9 @@ function App() {
   }
 
   // !!!!!!!!!!!!!!!!!!!!! robienie przyciskow toggle do faq
-  const [isToggled, setToggle] = useState(false);
-  const [isFaq, setFaq] = useState(false);
-  const [isFaqqed, setFaqqed] = useState(false);
+  const [isToggled, setToggle] = useState(true);
+  const [isFaq, setFaq] = useState(true);
+  const [isFaqqed, setFaqqed] = useState(true);
   const handleToggle = () => {
     setToggle(!isToggled);
   };
@@ -352,7 +352,7 @@ function App() {
               </div>
             </div>
           </form>
-          <div className="my-20 lg:my-0 lg:mb-20">
+          <div className="my-10 lg:my-0 lg:my-20 lg:mb-20">
             <h2 className="text-center text-2xl font-semibold">
               Plan your trip now
             </h2>
@@ -403,9 +403,9 @@ function App() {
               {/* tutaj kolejny div wleci, tym razem z lista, wiec obczaic jak sie robi liste. 3 kolumny, po lewej lista, srodek to fotka, po prawej rysopis */}
             </div>
           </div>
-          <section className="mb-20 flex h-fit w-full items-center">
+          <section className="mb-20 flex h-fit w-full flex-col items-center lg:flex-row">
             {/* kolumna z przyciskami JS */}
-            <div className="flex h-fit w-1/4 flex-col justify-center gap-2 pl-10 text-xl font-bold">
+            <div className="flex h-fit w-1/4 justify-center gap-2 bg-blue-300 text-xl font-bold lg:flex-col lg:pl-10">
               <button
                 onClick={() => {
                   nowaFunkcja(0);
@@ -419,7 +419,7 @@ function App() {
                 onClick={() => {
                   nowaFunkcja(1);
                 }}
-                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
                 id="auto2"
               >
                 VW
@@ -428,7 +428,7 @@ function App() {
                 onClick={() => {
                   nowaFunkcja(2);
                 }}
-                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
                 id="auto3"
               >
                 Toyota
@@ -437,7 +437,7 @@ function App() {
                 onClick={() => {
                   nowaFunkcja(3);
                 }}
-                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
                 id="auto4"
               >
                 BMW
@@ -446,7 +446,7 @@ function App() {
                 onClick={() => {
                   nowaFunkcja(4);
                 }}
-                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
                 id="auto5"
               >
                 Mercedes
@@ -455,18 +455,18 @@ function App() {
                 onClick={() => {
                   nowaFunkcja(5);
                 }}
-                className="bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                className="hidden bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
                 id="auto6"
               >
                 Passat
               </button>
             </div>
             {/* kolumna ze zmieniajacymi sie fotkami aut */}
-            <div className="m-10 flex h-min w-1/2 justify-center">
+            <div className="m-10 flex h-min justify-center lg:w-1/2">
               <img src={models[zero].img} alt="auto1" />
             </div>
             {/* kolumna z tabelkami */}
-            <div className="mx-3 flex h-fit w-1/4 flex-col gap-2 pr-10">
+            <div className="mx-3 flex h-fit w-full flex-col gap-2 lg:w-1/4 lg:pr-10">
               <div className="">
                 <div className="flex items-center justify-center gap-3 bg-[#ff4d30] p-3 text-white">
                   <span className="text-2xl font-bold">
@@ -507,17 +507,17 @@ function App() {
                   </div>
                 </div>
               </div>
-              <button className="mt-2 bg-[#ff4d30] p-3 text-lg font-bold text-white shadow-[5px_5px_0_0_rgba(0,0,0,.2)] duration-150 hover:brightness-95 active:scale-95 active:shadow-none">
+              <button className="bg-[#ff4d30] p-3 text-lg font-bold text-white shadow-[5px_5px_0_0_rgba(0,0,0,.2)] duration-150 hover:brightness-95 active:scale-95 active:shadow-none lg:mt-2">
                 RESERVE NOW
               </button>
             </div>
           </section>
           <section className="flex h-fit flex-col items-center justify-center gap-5 bg-[#2d2d2d]">
-            <div className="py-[45px]">
-              <h1 className="text-6xl font-bold text-white">
+            <div className="py-[45px] lg:space-y-5">
+              <h1 className="mx-auto text-center text-3xl font-bold text-white lg:text-6xl">
                 Save big with our cheap car rental!
               </h1>
-              <p className="text-3xl text-white">
+              <p className="mx-auto mt-5 w-[80%] text-center text-white lg:mt-0 lg:w-full lg:text-3xl">
                 Top Airports. Local Suppliers.{" "}
                 <span className="text-[#ff4d30]">24/7</span> Support.
               </p>
@@ -525,7 +525,7 @@ function App() {
           </section>
 
           <img src={tlo2} alt="tlo2" className="mx-auto my-10" />
-          <div className="relative flex flex-col lg:flex-row">
+          <div className="relative mb-5 flex flex-col lg:mb-0 lg:flex-row">
             <img
               src={sladyopon}
               alt="sladyopon"
@@ -533,7 +533,7 @@ function App() {
             />
             <div className="w-full gap-5 px-10 lg:w-1/2 lg:px-0 lg:pl-40">
               <h2 className="text-xl font-bold">Why Choose Us</h2>
-              <h1 className="text-5xl font-bold">
+              <h1 className="mt-4 text-3xl font-bold lg:text-5xl">
                 Best valued deals you will ever find
               </h1>
               <p className="mt-4 text-[#706f7b]">
@@ -611,10 +611,14 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="mt-10 flex h-fit w-full flex-col bg-[#f8f8f8] pb-40 pt-20">
-            <div className="mx-auto w-1/2 text-center">
-              <h2 className="text-xl font-bold">Reviewed by People</h2>
-              <h1 className="text-5xl font-bold">Client's Testimonials</h1>
+          <div className="flex h-fit w-full flex-col bg-[#f8f8f8] pb-10 pt-10 lg:mt-10 lg:pb-40 lg:pt-20">
+            <div className="mx-auto w-[80%] text-center lg:w-1/2">
+              <h2 className="text-center text-lg font-semibold lg:text-xl">
+                Reviewed by People
+              </h2>
+              <h1 className="mt-2 text-3xl font-bold lg:text-5xl">
+                Client's Testimonials
+              </h1>
               <p className="mt-4 text-[#706f7b]">
                 Discover the positive impact we've made on the our clients by
                 reading through their testimonials. Our clients have experienced
@@ -622,19 +626,27 @@ function App() {
                 positive experiences with you.
               </p>
             </div>
-            <div className="relative z-20 flex justify-center gap-5">
-              <div className="ml-[10%] mt-20 h-fit w-[60%] border-white bg-white p-10 text-left text-xl shadow-md">
-                <p className="mt-5 font-semibold">
+            <div className="relative z-20 flex flex-col justify-center lg:flex-row  lg:gap-5">
+              <div className="mt-20 h-fit border-white bg-white p-10 text-left text-xl shadow-md lg:ml-[10%] lg:w-[60%]">
+                <p className="mt-5 text-sm font-semibold lg:text-xl">
                   "We rented a car from this website and had an amazing
                   experience! The booking was easy and the rental rates were
                   very affordable. "
                 </p>
-                <div className="mt-20 flex justify-around gap-20">
+                <div className="mt-10 flex justify-around lg:mt-20 lg:gap-20">
                   <div className="flex">
-                    <img src={heri} alt="heri" className="w-20 rounded-full" />
-                    <div className="ml-5  mt-3">
-                      <h1 className="font-bold">Heri Porter</h1>
-                      <p className="text-[16px]">Pruszcz Gdański</p>
+                    <img
+                      src={heri}
+                      alt="heri"
+                      className="mt-4 h-[60%] w-[20%] rounded-full lg:h-20 lg:w-20"
+                    />
+                    <div className="ml-2  mt-3 lg:ml-5">
+                      <h1 className="text-[80%] font-bold lg:text-[100%]">
+                        Heri Porter
+                      </h1>
+                      <p className="text-[12px] lg:text-[16px]">
+                        Pruszcz Gdański
+                      </p>
                     </div>
                   </div>
                   <svg
@@ -655,17 +667,23 @@ function App() {
                   </svg>
                 </div>
               </div>
-              <div className="mr-[10%] mt-20 h-fit w-[60%] border-white bg-white p-10 text-left text-xl shadow-md">
-                <p className="mt-5 font-semibold">
+              <div className="mt-20 h-fit border-white bg-white p-10 text-left text-xl shadow-md lg:mr-[10%] lg:w-[60%]">
+                <p className="mt-5 text-sm font-semibold lg:text-xl">
                   "The car was in great condition and made our trip even better.
                   Highly recommend for this car rental website!"
                 </p>
-                <div className="mt-20 flex justify-around gap-20">
+                <div className="mt-10 flex justify-around  lg:mt-20 lg:gap-20">
                   <div className="flex">
-                    <img src={ron} alt="ron" className="w-20 rounded-full" />
-                    <div className="ml-5 mt-3">
-                      <h1 className="font-bold">Roland Wololo</h1>
-                      <p className="text-[16px]">Wroclove</p>
+                    <img
+                      src={ron}
+                      alt="ron"
+                      className="mt-4 h-[65%] w-[20%] rounded-full lg:h-20 lg:w-20"
+                    />
+                    <div className="ml-2 mt-3 lg:ml-5">
+                      <h1 className=" text-[80%] font-bold lg:text-[100%]">
+                        Roland Wololo
+                      </h1>
+                      <p className="text-[12px] lg:text-[16px]">Wroclove</p>
                     </div>
                   </div>
                   <svg
@@ -679,7 +697,7 @@ function App() {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="tabler-icon tabler-icon-quote"
-                    className="mt-3  text-[#ff4d30]"
+                    className="mt-3 w-40 text-[#ff4d30] lg:w-20"
                   >
                     <path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"></path>
                     <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"></path>
@@ -689,16 +707,18 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="relative z-10 flex h-screen w-full flex-col items-center gap-20 bg-white">
-          <div className="space-y-10 text-center">
-            <h5 className="pt-20 text-2xl font-bold">FAQ</h5>
-            <h1 className="text-5xl font-bold">Frequently Asked Questions</h1>
+        <section className="relative z-10 flex h-screen w-full flex-col items-center gap-10 bg-white lg:gap-20">
+          <div className="space-y-5 text-center lg:space-y-10">
+            <h5 className="pt-10 text-2xl font-bold lg:pt-20">FAQ</h5>
+            <h1 className="mx-auto w-[70%] text-2xl font-bold lg:text-5xl">
+              Frequently Asked Questions
+            </h1>
             <p className="mx-auto w-[80%]">
               Frequently Asked Questions About the Car Rental Booking Process on
               Our Website: Answers to Common Concerns and Inquiries.
             </p>
           </div>
-          <div className="relative z-10 flex w-[60%] flex-col bg-white shadow-md shadow-black/50">
+          <div className="relative z-10 flex flex-col bg-white/[80%] shadow-md shadow-black/50 lg:w-[60%]">
             {/* <button
                 onClick={() => {
                   nowaFunkcja(3);
@@ -707,9 +727,9 @@ function App() {
               onClick={() => {
                 handleToggle();
               }}
-              className="flex h-fit flex-col justify-between p-5 px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white"
+              className="flex h-fit flex-col justify-between p-2 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white lg:p-5 lg:px-10"
             >
-              <span className="flex w-full justify-between">
+              <span className="flex w-full justify-between text-xs lg:text-lg">
                 {" "}
                 1. What is special about comparing rental car deals?
                 <svg
@@ -728,7 +748,11 @@ function App() {
                   <path d="M6 9l6 6l6 -6"></path>
                 </svg>
               </span>
-              <div className={`${isToggled ? "hidden" : "flex"} font-thin`}>
+              <div
+                className={`${
+                  isToggled ? "hidden" : "flex"
+                } mt-1 px-5 text-xs font-thin lg:mt-0 lg:text-base `}
+              >
                 Comparing rental car deals is important as it helps find the
                 best deal that fits your budget and requirements, ensuring you
                 get the most value for your money. By comparing various options,
@@ -742,9 +766,9 @@ function App() {
               onClick={() => {
                 handleFaq();
               }}
-              className="flex h-fit flex-col items-center justify-between  p-5 px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white"
+              className="flex h-fit flex-col items-center justify-between  p-2 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white lg:p-5 lg:px-10"
             >
-              <span className="flex w-full justify-between">
+              <span className="flex w-full justify-between text-xs lg:text-lg">
                 2. How do I find the car rental deals?{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -762,7 +786,11 @@ function App() {
                   <path d="M6 9l6 6l6 -6"></path>
                 </svg>
               </span>
-              <div className={`${isFaq ? "hidden" : "flex"} font-light`}>
+              <div
+                className={`${
+                  isFaq ? "hidden" : "flex"
+                } px-5 text-xs font-thin lg:text-base`}
+              >
                 You can find car rental deals by researching online and
                 comparing prices from different rental companies. Websites such
                 as Expedia, Kayak, and Travelocity allow you to compare prices
@@ -775,9 +803,9 @@ function App() {
               onClick={() => {
                 toggleFaq();
               }}
-              className="flex h-fit flex-col items-center justify-between p-5 px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30]  active:text-white"
+              className="flex h-fit flex-col items-center justify-between p-2 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white lg:p-5  lg:px-10"
             >
-              <span className="flex w-full justify-between">
+              <span className="flex w-full justify-between text-xs lg:text-lg">
                 3. How do I find such low rental car prices?{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -795,7 +823,11 @@ function App() {
                   <path d="M6 9l6 6l6 -6"></path>
                 </svg>
               </span>
-              <div className={`${isFaqqed ? "hidden" : "flex"} font-light`}>
+              <div
+                className={`${
+                  isFaqqed ? "hidden" : "flex"
+                } px-5 text-xs font-thin lg:text-base`}
+              >
                 Book in advance: Booking your rental car ahead of time can often
                 result in lower prices. Compare prices from multiple companies:
                 Use websites like Kayak, Expedia, or Travelocity to compare
