@@ -782,7 +782,7 @@ function App() {
             className="absolute left-0 top-72 z-0"
           />
         </section>
-        <footer className="h-screen w-full bg-blue-300"></footer>
+        <footer className="h-screen w-full bg-blue-600"></footer>
       </main>
     </>
   );
