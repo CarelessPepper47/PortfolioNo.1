@@ -524,7 +524,7 @@ function App() {
             </div>
           </section>
 
-          <img src={tlo2} alt="tlo2" className="mx-auto my-10" />
+          <img src={tlo2} alt="tlo2" className="mx-auto my-10 hidden lg:flex" />
           <div className="relative flex flex-col lg:flex-row">
             <img
               src={sladyopon}
