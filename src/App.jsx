@@ -75,11 +75,7 @@ function App() {
   return (
     <>
       {/* hover:m-10 */}
-      <img
-        src={backg}
-        alt="tlo"
-        className="absolute right-0 z-0 hidden md:block"
-      />
+      <img src={backg} alt="tlo" className="absolute right-0 z-0 sm:hidden" />
       <header className="relative z-10 flex p-5 font-semibold transition-all md:flex-col">
         <nav className="flex w-full items-center justify-around">
           <img class="w-40" src={zdjecie} alt="Logo" />
@@ -107,12 +103,12 @@ function App() {
               Save <span className="text-[#ff4d30]">big</span> with our car
               rental
             </div>
-            <div className="mt-4 w-full text-justify font-medium text-black/60">
+            <div className="mt-4 w-full text-left font-medium text-black/60">
               Rent the car of your dreams. Unbeatable prices, unlimited miles,
               flexible pick-up options and much more
             </div>
-            <div className="mt-10 flex gap-10">
-              <button className="flex gap-2 bg-[#ff4d30] p-6 text-white">
+            <div className="mt-10 flex gap-10 sm:w-1/2 sm:gap-3">
+              <button className="flex gap-2 rounded bg-[#ff4d30] p-6 text-white">
                 Book Ride
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +127,7 @@ function App() {
                   <path d="M9 12l2 2l4 -4"></path>
                 </svg>
               </button>
-              <button className="flex bg-black p-6 text-white">
+              <button className="flex rounded bg-black p-6 text-white">
                 Learn More{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -154,14 +150,14 @@ function App() {
             <img src={volk} alt="volks" className="relative" />
           </div>
         </article>
-        <section className="relative h-fit w-full">
+        <section className="relative h-fit w-full sm:text-center">
           <form
             className="m-10 mb-20 flex flex-col gap-3 p-20 shadow-2xl"
             action=""
           >
             <h2 className="text-2xl font-bold">Book a Car</h2>
-            <div className="flex gap-3">
-              <div className="w-1/3">
+            <div className="flex gap-3 sm:flex-col">
+              <div className="w-1/3 sm:w-full">
                 <label
                   htmlFor=""
                   for="AutoChoice"
@@ -198,7 +194,7 @@ function App() {
                   <option value="Mercedes">Mercedes</option>
                 </select>
               </div>
-              <div className="w-1/3">
+              <div className="w-1/3 sm:w-full">
                 <label
                   htmlFor=""
                   for="PickUpChoice"
@@ -237,7 +233,7 @@ function App() {
                   <option value="Krakow">Kraków</option>
                 </select>
               </div>
-              <div className="w-1/3">
+              <div className="w-1/3 sm:w-full">
                 <label
                   htmlFor=""
                   for="DropOffChoice"
@@ -277,8 +273,8 @@ function App() {
                 </select>
               </div>
             </div>
-            <div className="flex w-full gap-3">
-              <div className="w-1/3">
+            <div className="flex w-full gap-3 sm:flex-col">
+              <div className="w-1/3 sm:w-full">
                 <label
                   htmlFor=""
                   for="PickUpChoice"
@@ -310,7 +306,7 @@ function App() {
                   className="w-full border-2 px-5 py-2 text-[#ababab]"
                 />
               </div>
-              <div className="w-1/3">
+              <div className="w-1/3 sm:w-full">
                 <label
                   htmlFor=""
                   for="DropOffDay"
@@ -342,7 +338,7 @@ function App() {
                   className="w-full border-2 px-5 py-2  text-[#ababab]"
                 />
               </div>
-              <div className="flex w-1/3 flex-col justify-end shadow-lg">
+              <div className="flex w-1/3 flex-col justify-end shadow-lg sm:h-[10vh] sm:w-full">
                 <button className="h-2/3 w-full bg-[#ff4d30] text-lg font-bold text-white shadow-white">
                   Search
                 </button>
@@ -385,7 +381,7 @@ function App() {
             </div>
           </div>
           <div className="mt-20 flex justify-center">
-            <div className="w-1/2 px-20">
+            <div className="w-1/2 px-20 sm:w-full">
               <h2 className="text-center text-lg font-semibold">
                 Vehicle Models
               </h2>
@@ -786,6 +782,7 @@ function App() {
             className="absolute left-0 top-72 z-0"
           />
         </section>
+        <footer className="h-screen w-full bg-blue-300"></footer>
       </main>
     </>
   );
