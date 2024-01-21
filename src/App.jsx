@@ -154,7 +154,7 @@ function App() {
             </div>
           </div>
           <div className="">
-            <img src={volk} alt="volks" className="relative" />
+            <img src={volk} alt="volks" className="relative hidden lg:flex" />
           </div>
         </article>
         <section className="relative h-fit w-full sm:text-center">
@@ -524,7 +524,7 @@ function App() {
             </div>
           </section>
 
-          <img src={tlo2} alt="tlo2" className="mx-auto my-10 hidden lg:flex" />
+          <img src={tlo2} alt="tlo2" className="mx-auto my-10" />
           <div className="relative flex flex-col lg:flex-row">
             <img
               src={sladyopon}
