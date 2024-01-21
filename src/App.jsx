@@ -27,15 +27,18 @@ function App() {
 
   // !!!!!!!!!!!!!!!!!!!!! robienie przyciskow toggle do faq
   const [isToggled, setToggle] = useState(false);
+  const [isFaq, setFaq] = useState(false);
+  const [isFaqqed, setFaqqed] = useState(false);
   const handleToggle = () => {
     setToggle(!isToggled);
   };
+  const handleFaq = () => {
+    setFaq(!isFaq);
+  };
+  const toggleFaq = () => {
+    setFaqqed(!isFaqqed);
+  };
 
-  function rozwinFaq() {
-    setToggle(!isToggled);
-
-    return <button onClick={handleToggle}>{isToggled ? "ON" : "OFF"}</button>;
-  }
   // const toggleFaq = () => {
   //   const [isToggled, setToggle] = useState(false);
 
@@ -75,8 +78,12 @@ function App() {
   return (
     <>
       {/* hover:m-10 */}
-      <img src={backg} alt="tlo" className="absolute right-0 z-0 sm:hidden" />
-      <header className="relative z-10 flex p-5 font-semibold transition-all md:flex-col">
+      <img
+        src={backg}
+        alt="tlo"
+        className="absolute right-0 z-0 hidden lg:block "
+      />
+      <header className="relative z-10 hidden p-5 font-semibold transition-all md:flex-col lg:flex">
         <nav className="flex w-full items-center justify-around">
           <img class="w-40" src={zdjecie} alt="Logo" />
           <div className="flex space-x-6 py-8 text-center">
@@ -96,8 +103,8 @@ function App() {
         </nav>
       </header>
       <main className="z-10 mt-10 bg-[#FFF]">
-        <article className="mx-5 flex flex-col font-bold md:flex-row">
-          <div className="ml-10 flex flex-col justify-center">
+        <article className="flex flex-col font-bold md:flex-row lg:mx-5">
+          <div className="flex flex-col justify-center lg:ml-10">
             <div className="text-lg">Plan your trip now</div>
             <div className="text-5xl">
               Save <span className="text-[#ff4d30]">big</span> with our car
@@ -107,8 +114,8 @@ function App() {
               Rent the car of your dreams. Unbeatable prices, unlimited miles,
               flexible pick-up options and much more
             </div>
-            <div className="mt-10 flex gap-10 sm:w-1/2 sm:gap-3">
-              <button className="flex gap-2 rounded bg-[#ff4d30] p-6 text-white">
+            <div className="mt-10 flex flex-col gap-5 lg:flex-row">
+              <button className="flex justify-center gap-2 rounded bg-[#ff4d30] p-6 text-white">
                 Book Ride
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +134,7 @@ function App() {
                   <path d="M9 12l2 2l4 -4"></path>
                 </svg>
               </button>
-              <button className="flex rounded bg-black p-6 text-white">
+              <button className="flex justify-center rounded bg-black p-6 text-white">
                 Learn More{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -152,12 +159,12 @@ function App() {
         </article>
         <section className="relative h-fit w-full sm:text-center">
           <form
-            className="m-10 mb-20 flex flex-col gap-3 p-20 shadow-2xl"
+            className="flex flex-col gap-3 shadow-2xl lg:m-10 lg:mb-20 lg:p-20"
             action=""
           >
             <h2 className="text-2xl font-bold">Book a Car</h2>
-            <div className="flex gap-3 sm:flex-col">
-              <div className="w-1/3 sm:w-full">
+            <div className="flex flex-col gap-3 lg:flex-row">
+              <div className="lg:w-1/3">
                 <label
                   htmlFor=""
                   for="AutoChoice"
@@ -194,7 +201,7 @@ function App() {
                   <option value="Mercedes">Mercedes</option>
                 </select>
               </div>
-              <div className="w-1/3 sm:w-full">
+              <div className="lg:w-1/3">
                 <label
                   htmlFor=""
                   for="PickUpChoice"
@@ -233,7 +240,7 @@ function App() {
                   <option value="Krakow">Kraków</option>
                 </select>
               </div>
-              <div className="w-1/3 sm:w-full">
+              <div className="lg:w-1/3">
                 <label
                   htmlFor=""
                   for="DropOffChoice"
@@ -273,8 +280,8 @@ function App() {
                 </select>
               </div>
             </div>
-            <div className="flex w-full gap-3 sm:flex-col">
-              <div className="w-1/3 sm:w-full">
+            <div className="flex w-full flex-col gap-3 lg:flex-row">
+              <div className="lg:w-1/3">
                 <label
                   htmlFor=""
                   for="PickUpChoice"
@@ -306,7 +313,7 @@ function App() {
                   className="w-full border-2 px-5 py-2 text-[#ababab]"
                 />
               </div>
-              <div className="w-1/3 sm:w-full">
+              <div className="lg:w-1/3">
                 <label
                   htmlFor=""
                   for="DropOffDay"
@@ -338,14 +345,14 @@ function App() {
                   className="w-full border-2 px-5 py-2  text-[#ababab]"
                 />
               </div>
-              <div className="flex w-1/3 flex-col justify-end shadow-lg sm:h-[10vh] sm:w-full">
+              <div className="flex flex-col justify-end shadow-lg sm:h-[10vh] sm:w-full lg:w-1/3">
                 <button className="h-2/3 w-full bg-[#ff4d30] text-lg font-bold text-white shadow-white">
                   Search
                 </button>
               </div>
             </div>
           </form>
-          <div className="mb-20">
+          <div className="my-20 lg:my-0 lg:mb-20">
             <h2 className="text-center text-2xl font-semibold">
               Plan your trip now
             </h2>
@@ -354,7 +361,7 @@ function App() {
             </h1>
           </div>
 
-          <div className="flex w-full justify-center gap-20 px-20">
+          <div className="flex w-full flex-col justify-center lg:flex-row lg:gap-20 lg:px-20">
             <div className="flex flex-1 flex-col items-center">
               <img src={select} alt="select" />
               <h2 className="mb-5 text-xl font-bold">Select Car</h2>
@@ -380,8 +387,8 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="mt-20 flex justify-center">
-            <div className="w-1/2 px-20 sm:w-full">
+          <div className="mt-20 flex flex-col justify-center lg:flex-row">
+            <div className="lg:w-1/2 lg:px-20">
               <h2 className="text-center text-lg font-semibold">
                 Vehicle Models
               </h2>
@@ -518,13 +525,13 @@ function App() {
           </section>
 
           <img src={tlo2} alt="tlo2" className="mx-auto my-10" />
-          <div className="relative flex">
+          <div className="relative flex flex-col lg:flex-row">
             <img
               src={sladyopon}
               alt="sladyopon"
-              className="absolute -top-[300px] z-0 h-[738px] w-[80%]"
+              className="absolute -top-[300px] z-0 hidden h-[738px] w-[80%] lg:block"
             />
-            <div className="w-1/2 gap-5 pl-40">
+            <div className="w-full gap-5 px-10 lg:w-1/2 lg:px-0 lg:pl-40">
               <h2 className="text-xl font-bold">Why Choose Us</h2>
               <h1 className="text-5xl font-bold">
                 Best valued deals you will ever find
@@ -537,7 +544,7 @@ function App() {
                 the ultimate renting experience, so don't miss out on your
                 chance to save big.
               </p>
-              <button className="mt-5 flex rounded bg-[#ff4d30] px-6 py-4 font-bold text-white">
+              <button className="my-10 mt-5 flex w-full justify-center rounded bg-[#ff4d30] px-6 py-4 font-bold text-white lg:mx-auto lg:w-[35%]">
                 Find Details{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -555,7 +562,7 @@ function App() {
                 </svg>
               </button>
             </div>
-            <div className="w-1/2 space-y-10">
+            <div className="w-full space-y-10 lg:w-1/2">
               {/* <img
                 src={sladyopon}
                 alt="sladyopon"
@@ -692,12 +699,30 @@ function App() {
                 }} */}
             <button
               onClick={() => {
-                rozwinFaq;
+                handleToggle();
               }}
-              className="flex h-20 items-center justify-between px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white"
+              className="flex h-fit flex-col justify-between p-5 px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white"
             >
-              1. What is special about comparing rental car deals?
-              <div className="hidden">
+              <span className="flex w-full justify-between">
+                {" "}
+                1. What is special about comparing rental car deals?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="tabler-icon tabler-icon-chevron-down"
+                  className=""
+                >
+                  <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+              </span>
+              <div className={`${isToggled ? "hidden" : "flex"} font-thin`}>
                 Comparing rental car deals is important as it helps find the
                 best deal that fits your budget and requirements, ensuring you
                 get the most value for your money. By comparing various options,
@@ -706,25 +731,32 @@ function App() {
                 researching online and comparing prices from different rental
                 companies.
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="tabler-icon tabler-icon-chevron-down"
-                className=""
-              >
-                <path d="M6 9l6 6l6 -6"></path>
-              </svg>
             </button>
-            <button className="flex h-20 items-center  justify-between px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white">
-              2. How do I find the car rental deals?
-              <div className="hidden">
+            <button
+              onClick={() => {
+                handleFaq();
+              }}
+              className="flex h-fit flex-col items-center justify-between  p-5 px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white"
+            >
+              <span className="flex w-full justify-between">
+                2. How do I find the car rental deals?{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="tabler-icon tabler-icon-chevron-down"
+                  className=""
+                >
+                  <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+              </span>
+              <div className={`${isFaq ? "hidden" : "flex"} font-light`}>
                 You can find car rental deals by researching online and
                 comparing prices from different rental companies. Websites such
                 as Expedia, Kayak, and Travelocity allow you to compare prices
@@ -732,25 +764,32 @@ function App() {
                 sign up for email newsletters and follow rental car companies on
                 social media to be informed of any special deals or promotions.
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="tabler-icon tabler-icon-chevron-down"
-                className=""
-              >
-                <path d="M6 9l6 6l6 -6"></path>
-              </svg>
             </button>
-            <button className="flex h-20 items-center justify-between px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30]  active:text-white">
-              3. How do I find such low rental car prices?
-              <div className="hidden">
+            <button
+              onClick={() => {
+                toggleFaq();
+              }}
+              className="flex h-fit flex-col items-center justify-between p-5 px-10 text-left text-lg font-semibold transition-all active:bg-[#ff4d30]  active:text-white"
+            >
+              <span className="flex w-full justify-between">
+                3. How do I find such low rental car prices?{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="tabler-icon tabler-icon-chevron-down"
+                  className=""
+                >
+                  <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+              </span>
+              <div className={`${isFaqqed ? "hidden" : "flex"} font-light`}>
                 Book in advance: Booking your rental car ahead of time can often
                 result in lower prices. Compare prices from multiple companies:
                 Use websites like Kayak, Expedia, or Travelocity to compare
@@ -759,21 +798,6 @@ function App() {
                 you can use to lower the rental price. Renting from an
                 off-airport location can sometimes result in lower prices.
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="tabler-icon tabler-icon-chevron-down"
-                className=""
-              >
-                <path d="M6 9l6 6l6 -6"></path>
-              </svg>
             </button>
           </div>
           <img
