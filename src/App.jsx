@@ -531,12 +531,14 @@ function App() {
               alt="sladyopon"
               className="absolute -top-[300px] z-0 hidden h-[738px] w-[80%] lg:block"
             />
-            <div className="w-full gap-5 px-10 lg:w-1/2 lg:px-0 lg:pl-40">
-              <h2 className="text-xl font-bold">Why Choose Us</h2>
-              <h1 className="mt-4 text-3xl font-bold lg:text-5xl">
+            <div className="w-full gap-5 lg:w-1/2 lg:px-10 lg:pl-40">
+              <h2 className="text-center text-xl font-bold lg:text-left">
+                Why Choose Us
+              </h2>
+              <h1 className="mt-4 text-center text-3xl font-bold lg:text-left lg:text-5xl">
                 Best valued deals you will ever find
               </h1>
-              <p className="mt-4 text-[#706f7b]">
+              <p className="mt-5 px-5 text-[#706f7b] lg:px-0">
                 Discover the best deals you'll ever find with our unbeatable
                 offers. We're dedicated to providing you with the best value for
                 your money, so you can enjoy top-quality services and products
@@ -544,7 +546,7 @@ function App() {
                 the ultimate renting experience, so don't miss out on your
                 chance to save big.
               </p>
-              <button className="my-10 mt-5 flex w-full justify-center rounded bg-[#ff4d30] px-6 py-4 font-bold text-white lg:mx-auto lg:w-[35%]">
+              <button className="mx-auto my-10 mt-5 flex w-full justify-center bg-[#ff4d30] py-4 font-bold text-white lg:mx-0 lg:w-[35%] lg:rounded lg:px-6">
                 Find Details{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -573,8 +575,8 @@ function App() {
                 alt="sladyopon"
                 className="absolute bottom-20 left-0 z-0"
               /> */}
-              <div className="flex flex-col gap-3 px-20 lg:flex-row">
-                <img src={ccd} alt="ccd" />
+              <div className="flex flex-col gap-3 px-5 lg:flex-row lg:px-20">
+                <img src={ccd} alt="ccd" className="px-20 lg:px-0" />
                 <div>
                   <h1 className="text-center text-2xl font-bold lg:text-left">
                     Cross Country Drive
@@ -585,8 +587,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="flex  flex-col gap-3 px-20 lg:flex-row">
-                <img src={aip} alt="aip" />
+              <div className="flex  flex-col gap-3 px-5 lg:flex-row lg:px-20">
+                <img src={aip} alt="aip" className="px-20 lg:px-0" />
                 <div>
                   <h1 className="text-center text-2xl font-bold lg:text-left">
                     All Inclusive Pricing
@@ -597,8 +599,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="flex  flex-col gap-3 px-20 lg:flex-row">
-                <img src={nhc} alt="nhc" />
+              <div className="flex  flex-col gap-3 px-5 lg:flex-row lg:px-20">
+                <img src={nhc} alt="nhc" className="px-20 lg:px-0" />
                 <div>
                   <h1 className="text-center text-2xl font-bold lg:text-left">
                     No Hidden Charges
@@ -730,8 +732,10 @@ function App() {
               className="flex h-fit flex-col justify-between p-2 text-left text-lg font-semibold transition-all active:bg-[#ff4d30] active:text-white lg:p-5 lg:px-10"
             >
               <span className="flex w-full justify-between text-xs lg:text-lg">
-                {" "}
-                1. What is special about comparing rental car deals?
+                1.&#160;
+                <span className="w-[85%] lg:w-[100%]">
+                  What is special about comparing rental car deals?
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
