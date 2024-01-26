@@ -231,7 +231,7 @@ function App() {
             </svg>
           </a>
         </button>
-        <article className="mb-10 flex flex-col font-bold md:flex-row lg:mx-5 lg:mb-0">
+        <article className="mb-10 flex flex-col font-bold md:flex-row lg:mx-5 lg:mb-0 dark:text-white">
           <div className="flex flex-col justify-center lg:ml-10">
             <div className="m-3 text-3xl">Plan your trip now</div>
             <div className="m-3 text-5xl">
