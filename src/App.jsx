@@ -21,10 +21,21 @@ import droga from "./assets/Droga.png";
 
 function App() {
   const [zero, setZero] = useState(0);
+  const [dark, setDark] = useState(false);
+  const [collapse, setCollapse] = useState(false);
 
   function nowaFunkcja(morel) {
     setZero(morel);
   }
+
+  const zmienDark = () => {
+    setDark(!dark);
+  };
+
+  const zmienCollapse = () => {
+    console.log("zjeb");
+    setCollapse(!collapse);
+  };
 
   // !!!!!!!!!!!!!!!!!!!!! robienie przyciskow toggle do faq
   const [isToggled, setToggle] = useState(true);
@@ -77,7 +88,7 @@ function App() {
   // SAMOCHÓD
 
   return (
-    <>
+    <div className={`${dark ? "dark" : ""}`}>
       {/* hover:m-10 */}
       <img
         id="home"
@@ -85,8 +96,8 @@ function App() {
         alt="tlo"
         className="absolute right-0 z-0 hidden lg:block "
       />
-      <header className="relative z-10 hidden p-5 font-semibold transition-all md:flex-col lg:flex">
-        <nav className="flex w-full items-center justify-around">
+      <header className="relative z-10 p-5 font-semibold md:flex-col lg:flex dark:bg-slate-700">
+        <nav className="hidden w-full items-center justify-around lg:flex dark:bg-slate-700 dark:text-white">
           <img class="w-40" src={zdjecie} alt="Logo" />
           <div className="flex space-x-6 py-8 text-center">
             <div className="">Home</div>
@@ -96,7 +107,11 @@ function App() {
             <div className="">Our Team</div>
             <div className="">Contact</div>
             <div>
-              <button>
+              <button
+                onClick={() => {
+                  zmienDark();
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -108,6 +123,7 @@ function App() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="lucide lucide-eclipse"
+                  className=""
                 >
                   <circle cx="12" cy="12" r="10" />
                   <path d="M12 2a7 7 0 1 0 10 10" />
@@ -122,8 +138,71 @@ function App() {
             </button>
           </div>
         </nav>
+        <svg
+          onClick={() => {
+            zmienCollapse();
+          }}
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-menu"
+          className="mt-5 flex lg:hidden"
+        >
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+        {collapse ? (
+          <nav className="flex w-full flex-col items-center justify-around lg:hidden dark:bg-slate-700 dark:text-white">
+            <img class="w-40" src={zdjecie} alt="Logo" />
+            <div className="flex flex-col space-y-6 pt-4 text-center">
+              <div className="">Home</div>
+              <div className="">About</div>
+              <div className="">Vehicle Models</div>
+              <div className="">Testimonials</div>
+              <div className="">Our Team</div>
+              <div className="">Contact</div>
+              <div>
+                <button
+                  onClick={() => {
+                    zmienDark();
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-eclipse"
+                    className=""
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 2a7 7 0 1 0 10 10" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <button className="px-5 py-2.5">Sign In</button>
+              <button className=" bg-[#ff4d30] px-5 py-2.5 text-white shadow-md shadow-black/30">
+                Register
+              </button>
+            </div>
+          </nav>
+        ) : null}
       </header>
-      <main className="z-10 mt-10 bg-[#FFF]">
+      <main className="z-10 mt-10 bg-[#FFF] dark:bg-slate-700">
         <button className="fixed bottom-0 right-0 z-30 m-10 scale-75 rounded-full bg-[#ff4d30] p-1 text-white lg:scale-100">
           <a href="#home">
             <svg
@@ -393,7 +472,7 @@ function App() {
               </div>
             </div>
           </form>
-          <div className="my-10 lg:my-0 lg:my-20 lg:mb-20">
+          <div className="my-10 lg:my-20 lg:mb-20">
             <h2 className="text-center text-2xl font-semibold">
               Plan your trip now
             </h2>
@@ -893,11 +972,9 @@ function App() {
             className="absolute left-0 top-72 z-0"
           />
         </section>
-        <footer className="h-screen w-full">
-          <img src={droga} alt="droga" className="absolute w-full" />
-        </footer>
+        <footer className="h-screen w-full"></footer>
       </main>
-    </>
+    </div>
   );
 }
 
