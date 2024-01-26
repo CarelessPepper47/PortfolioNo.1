@@ -18,8 +18,10 @@ import heri from "./assets/Heri.jpg";
 import ron from "./assets/Ron.jpg";
 import faqcar from "./assets/faqcar.png";
 import droga from "./assets/Droga.png";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 function App() {
+  const [parent] = useAutoAnimate();
   const [zero, setZero] = useState(0);
   const [dark, setDark] = useState(false);
   const [collapse, setCollapse] = useState(false);
@@ -96,7 +98,10 @@ function App() {
         alt="tlo"
         className="absolute right-0 z-0 hidden lg:block "
       />
-      <header className="relative z-10 p-5 font-semibold md:flex-col lg:flex dark:bg-slate-700">
+      <header
+        ref={parent}
+        className="relative z-10 p-5 font-semibold md:flex-col lg:flex dark:bg-slate-700"
+      >
         <nav className="hidden w-full items-center justify-around lg:flex dark:bg-slate-700 dark:text-white">
           <img class="w-40" src={zdjecie} alt="Logo" />
           <div className="flex space-x-6 py-8 text-center">
