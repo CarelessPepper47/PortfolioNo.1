@@ -158,6 +158,7 @@ function App() {
           stroke-linejoin="round"
           class="lucide lucide-menu"
           className="mt-5 flex lg:hidden"
+          ref={parent}
         >
           {collapse ? (
             <path d="M18 6 6 18 M6 6 18 18" />
@@ -533,12 +534,12 @@ function App() {
           <section className="mb-20 flex h-fit w-full flex-col items-center lg:flex-row">
             {/* kolumna z przyciskami JS */}
             <div className="flex h-fit w-full flex-col gap-2 px-3 text-xl font-bold lg:w-1/4 lg:flex-col lg:justify-center lg:px-0 lg:pl-10">
-              <div className="flex justify-between gap-2 lg:flex-col">
+              <div className="flex w-full gap-2 lg:flex-col">
                 <button
                   onClick={() => {
                     nowaFunkcja(0);
                   }}
-                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white"
+                  className="w-1/3 bg-[#e9e9e9] py-3 transition-all hover:bg-[#ff4d30] hover:text-white lg:w-full lg:py-5"
                   id="auto1"
                 >
                   Audi
@@ -547,7 +548,7 @@ function App() {
                   onClick={() => {
                     nowaFunkcja(1);
                   }}
-                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  className="w-1/3 bg-[#e9e9e9] py-3 transition-all hover:bg-[#ff4d30] hover:text-white lg:block lg:w-full lg:py-5"
                   id="auto2"
                 >
                   VW
@@ -556,18 +557,18 @@ function App() {
                   onClick={() => {
                     nowaFunkcja(2);
                   }}
-                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  className="w-1/3 bg-[#e9e9e9] py-3 transition-all hover:bg-[#ff4d30] hover:text-white lg:block lg:w-full lg:py-5"
                   id="auto3"
                 >
                   Toyota
                 </button>
               </div>
-              <div className="flex justify-between gap-2 lg:flex-col">
+              <div className="flex gap-2 lg:flex-col">
                 <button
                   onClick={() => {
                     nowaFunkcja(3);
                   }}
-                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  className="w-1/3 bg-[#e9e9e9] py-3 transition-all hover:bg-[#ff4d30] hover:text-white lg:block lg:w-full lg:py-5"
                   id="auto4"
                 >
                   BMW
@@ -576,7 +577,7 @@ function App() {
                   onClick={() => {
                     nowaFunkcja(4);
                   }}
-                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  className="w-1/3 bg-[#e9e9e9] py-3 transition-all hover:bg-[#ff4d30] hover:text-white lg:block lg:w-full lg:py-5"
                   id="auto5"
                 >
                   Mercedes
@@ -585,7 +586,7 @@ function App() {
                   onClick={() => {
                     nowaFunkcja(5);
                   }}
-                  className="w-full bg-[#e9e9e9] p-5 transition-all hover:bg-[#ff4d30] hover:text-white lg:block"
+                  className="w-1/3 bg-[#e9e9e9] py-3 transition-all hover:bg-[#ff4d30] hover:text-white lg:block lg:w-full lg:py-5"
                   id="auto6"
                 >
                   Passat
@@ -771,7 +772,7 @@ function App() {
                     <img
                       src={heri}
                       alt="heri"
-                      className="mt-4 h-[60%] w-[20%] rounded-full lg:h-20 lg:w-20"
+                      className="mt-4 w-[20%] rounded-full lg:h-20 lg:w-20"
                     />
                     <div className="ml-2  mt-3 lg:ml-5">
                       <h1 className="text-[80%] font-bold lg:text-[100%]">
@@ -810,7 +811,7 @@ function App() {
                     <img
                       src={ron}
                       alt="ron"
-                      className="mt-4 h-[65%] w-[20%] rounded-full lg:h-20 lg:w-20"
+                      className="mt-4 w-[20%] rounded-full lg:h-20 lg:w-20"
                     />
                     <div className="ml-2 mt-3 lg:ml-5">
                       <h1 className=" text-[80%] font-bold lg:text-[100%]">
