@@ -102,7 +102,7 @@ function App() {
         ref={parent}
         className="relative z-10 p-5 font-semibold md:flex-col lg:flex dark:bg-slate-700"
       >
-        <nav className="relative z-10 hidden w-full items-center justify-around lg:flex dark:bg-slate-700 dark:text-white">
+        <nav className="relative z-10 hidden w-full items-center justify-around lg:flex dark:bg-red-700 dark:text-white">
           <img class="w-40" src={zdjecie} alt="Logo" />
           <div className="flex space-x-6 py-8 text-center">
             <div className="">Home</div>
