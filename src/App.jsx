@@ -20,7 +20,7 @@ import faqcar from "./assets/faqcar.png";
 import droga from "./assets/Droga.png";
 import telefon from "./assets/Telefon.png";
 import download from "./assets/Download.svg";
-import appstore from "./assets/Appstore.svg";
+import appstore from "./assets/AppStore.svg";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 function App() {
