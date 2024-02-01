@@ -23,7 +23,7 @@
   }
 
   .bg-image {
-    background-image: url("src/assets/Telefon.png");
+    background-image: url("./assets/Telefon.png");
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center -45px;
