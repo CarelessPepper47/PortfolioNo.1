@@ -29,6 +29,8 @@ function App() {
   const [dark, setDark] = useState(false);
   const [collapse, setCollapse] = useState(false);
 
+  console.log(telefon);
+
   function nowaFunkcja(morel) {
     setZero(morel);
   }
