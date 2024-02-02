@@ -985,18 +985,18 @@ function App() {
             className="absolute left-0 top-72 z-0"
           />
         </section>
-        <footer className="flex h-fit w-full bg-[#f8f8f8]">
-          <div className="bg-image flex flex-col lg:mt-5 lg:p-10">
-            <div className="flex w-1/2 flex-col lg:gap-10">
-              <div className="text-5xl font-bold lg:w-[90%]">
+        <footer className="flex h-fit w-full">
+          <div className="bg-image flex flex-col bg-[#f8f8f8] lg:h-[65vh] lg:p-10 lg:pt-20">
+            <div className="flex flex-col lg:gap-10">
+              <div className="text-5xl font-bold lg:w-[50%]">
                 Download our app to get most out of it
               </div>
-              <div className="text-slate-500 lg:w-[80%]">
+              <div className="text-slate-500 lg:w-[45%]">
                 Thrown shy denote ten ladies though ask saw. Or by to he going
                 think order event music. Incommode so intention defective at
                 convinced. Led income months itself and houses you.
               </div>
-              <div className="flex">
+              <div className="flex gap-10">
                 <button>
                   <img src={download} alt="download" />
                 </button>
@@ -1006,6 +1006,16 @@ function App() {
               </div>
             </div>
           </div>
+        </footer>
+        <footer className="flex h-screen w-full">
+          <div className="flex flex-col">
+            <h1>
+              <b>CAR</b> Rental
+            </h1>
+          </div>
+          <div className="flex flex-col"></div>
+          <div className="flex flex-col"></div>
+          <div className="flex flex-col"></div>
         </footer>
       </main>
     </div>
