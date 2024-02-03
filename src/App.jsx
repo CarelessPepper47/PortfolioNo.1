@@ -1009,7 +1009,7 @@ function App() {
         </footer>
         <footer className="flex h-screen w-full">
           <div className="flex flex-col">
-            <h1>
+            <h1 className="text-3xl">
               <b>CAR</b> Rental
             </h1>
           </div>
