@@ -1007,15 +1007,46 @@ function App() {
             </div>
           </div>
         </footer>
-        <footer className="flex h-screen w-full">
-          <div className="flex flex-col">
+        <footer className="flex h-fit w-full lg:mt-20 lg:space-x-10 lg:p-10">
+          <div className="flex w-1/4 flex-col gap-5">
             <h1 className="text-3xl">
               <b>CAR</b> Rental
             </h1>
+            <p className="text-slate-500">
+              We offers a big range of vehicles for all your driving needs. We
+              have the perfect car to meet your needs.
+            </p>
           </div>
-          <div className="flex flex-col"></div>
-          <div className="flex flex-col"></div>
-          <div className="flex flex-col"></div>
+          <div className="flex w-1/4 flex-col gap-3">
+            <h1 className="text-3xl font-bold">COMPANY</h1>
+            <h2>New York</h2>
+            <h2>Careers</h2>
+            <h2>Mobile</h2>
+            <h2>Blog</h2>
+            <h2>How we work</h2>
+          </div>
+          <div className="flex w-1/4 flex-col gap-3">
+            <h1 className="text-3xl font-bold">WORKING HOURS</h1>
+            <h2>Mon - Fri: 9:00AM - 9:00PM</h2>
+            <h2>Sat: 9:00AM - 19:00PM</h2>
+            <h2>Sun: Closed</h2>
+          </div>
+          <div className="flex w-1/4 flex-col gap-3">
+            <h1 className="text-3xl font-bold">SUBSCRIPTION</h1>
+            <h2>Subscribe your Email address for latest news & updates.</h2>
+            <div className="flex flex-col gap-3">
+              <input
+                className="w-full rounded-md border border-slate-300 bg-gray-100 p-3 pl-10 placeholder-slate-400 focus:border-sky-500"
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter Your Email "
+              />
+              <button className="rounded-md bg-[#ff4d30] p-3 text-white">
+                Submit
+              </button>
+            </div>
+          </div>
         </footer>
       </main>
     </div>
