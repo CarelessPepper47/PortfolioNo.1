@@ -292,7 +292,7 @@ function App() {
         </article>
         <section className="relative h-fit w-full">
           <form
-            className="flex flex-col gap-3 shadow-2xl lg:m-10 lg:mb-20 lg:p-20"
+            className="m-2 flex flex-col gap-3 border-black p-8 shadow-2xl lg:m-10 lg:mb-20 lg:p-20"
             action=""
           >
             <h2 className="text-2xl font-bold lg:mb-2">Book a Car</h2>
@@ -857,7 +857,7 @@ function App() {
               Our Website: Answers to Common Concerns and Inquiries.
             </p>
           </div>
-          <div className="relative z-10 flex flex-col bg-white/[80%] shadow-md shadow-black/50 lg:w-[60%]">
+          <div className="relative z-10 flex w-[90%] flex-col bg-white/[80%] shadow-md shadow-black/50 lg:w-[60%]">
             {/* <button
                 onClick={() => {
                   nowaFunkcja(3);
@@ -986,9 +986,9 @@ function App() {
           />
         </section>
         <footer className="flex h-fit w-full">
-          <div className="bg-image flex flex-col bg-[#f8f8f8] lg:h-[65vh] lg:p-10 lg:pt-20">
-            <div className="flex flex-col lg:gap-10">
-              <div className="text-5xl font-bold lg:w-[50%]">
+          <div className="bg-image flex-col bg-[#f8f8f8] lg:flex lg:h-[65vh] lg:p-10 lg:pt-20">
+            <div className="mx-auto flex w-[80%] flex-col gap-10 text-center lg:mx-0 lg:text-left">
+              <div className="text-3xl font-bold lg:w-[50%] lg:text-5xl">
                 Download our app to get most out of it
               </div>
               <div className="text-slate-500 lg:w-[45%]">
@@ -996,7 +996,7 @@ function App() {
                 think order event music. Incommode so intention defective at
                 convinced. Led income months itself and houses you.
               </div>
-              <div className="flex gap-10">
+              <div className="mx-auto flex flex-col gap-10 lg:mx-0 lg:flex-row">
                 <button>
                   <img src={download} alt="download" />
                 </button>
@@ -1007,8 +1007,8 @@ function App() {
             </div>
           </div>
         </footer>
-        <footer className="flex h-fit w-full lg:mt-20 lg:space-x-10 lg:p-10">
-          <div className="flex w-1/4 flex-col gap-5">
+        <footer className="my-20 flex h-fit w-full flex-col space-y-10 lg:flex-row lg:space-x-10 lg:space-y-0 lg:p-10">
+          <div className="flex flex-col gap-5 text-center lg:w-1/4 lg:text-left">
             <h1 className="text-3xl">
               <b>CAR</b> Rental
             </h1>
@@ -1016,8 +1016,47 @@ function App() {
               We offers a big range of vehicles for all your driving needs. We
               have the perfect car to meet your needs.
             </p>
+            <div className="flex flex-col gap-4">
+              <p className="flex justify-center lg:justify-normal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone"
+                  className="mr-2"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>{" "}
+                (123) -456-789
+              </p>
+              <p className="flex justify-center lg:justify-normal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail"
+                  className="mr-2"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>{" "}
+                carrental@gmail.com
+              </p>
+            </div>
           </div>
-          <div className="flex w-1/4 flex-col gap-3">
+          <div className="mx-auto flex flex-col gap-3 text-center lg:mx-0 lg:w-1/4 lg:text-left">
             <h1 className="text-3xl font-bold">COMPANY</h1>
             <h2>New York</h2>
             <h2>Careers</h2>
@@ -1025,24 +1064,24 @@ function App() {
             <h2>Blog</h2>
             <h2>How we work</h2>
           </div>
-          <div className="flex w-1/4 flex-col gap-3">
+          <div className="mx-auto flex flex-col gap-3 text-center lg:mx-0 lg:w-1/4 lg:text-left">
             <h1 className="text-3xl font-bold">WORKING HOURS</h1>
             <h2>Mon - Fri: 9:00AM - 9:00PM</h2>
             <h2>Sat: 9:00AM - 19:00PM</h2>
             <h2>Sun: Closed</h2>
           </div>
-          <div className="flex w-1/4 flex-col gap-3">
+          <div className="mx-auto flex flex-col gap-3 text-center lg:mx-0 lg:w-1/4 lg:text-left">
             <h1 className="text-3xl font-bold">SUBSCRIPTION</h1>
             <h2>Subscribe your Email address for latest news & updates.</h2>
             <div className="flex flex-col gap-3">
               <input
-                className="w-full rounded-md border border-slate-300 bg-gray-100 p-3 pl-10 placeholder-slate-400 focus:border-sky-500"
+                className="w-full border border-slate-300 bg-gray-100 p-3 pl-10 placeholder-slate-400 focus:border-sky-500 lg:rounded-md"
                 type="email"
                 name=""
                 id=""
                 placeholder="Enter Your Email "
               />
-              <button className="rounded-md bg-[#ff4d30] p-3 text-white">
+              <button className="bg-[#ff4d30] p-3 text-white lg:rounded-md">
                 Submit
               </button>
             </div>
