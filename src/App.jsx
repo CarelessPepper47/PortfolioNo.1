@@ -987,7 +987,7 @@ function App() {
         </section>
         <footer className="flex h-fit w-full">
           <div className="bg-image flex-col bg-[#f8f8f8] lg:flex lg:h-[65vh] lg:p-10 lg:pt-20">
-            <div className="mx-auto flex w-[80%] flex-col gap-10 text-center lg:mx-0 lg:text-left">
+            <div className="mx-auto my-10 flex w-[80%] flex-col gap-10 text-center lg:mx-0 lg:my-0 lg:text-left">
               <div className="text-3xl font-bold lg:w-[50%] lg:text-5xl">
                 Download our app to get most out of it
               </div>
