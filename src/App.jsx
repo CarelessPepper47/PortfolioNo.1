@@ -22,6 +22,7 @@ import telefon from "./assets/Telefon.png";
 import download from "./assets/Download.svg";
 import appstore from "./assets/AppStore.svg";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import nowy from "./Nowy.js";
 
 function App() {
   const [parent] = useAutoAnimate();
@@ -107,10 +108,15 @@ function App() {
         ref={parent}
         className="relative z-10 p-5 font-semibold md:flex-col lg:flex dark:bg-slate-700"
       >
-        <nav className="relative z-10 hidden w-full items-center justify-around lg:flex dark:bg-red-700 dark:text-white">
+        <nav
+          id="navbar"
+          className="relative z-10 hidden w-full items-center justify-around lg:flex dark:bg-red-700 dark:text-white"
+        >
           <img class="w-40" src={zdjecie} alt="Logo" />
           <div className="flex space-x-6 py-8 text-center">
-            <div className="">Home</div>
+            <div className="">Home{nowy()}</div>{" "}
+            {/* DODATKOWA FUNCKJA W JSIE */}
+            {/* funkcja Nowy.js w kopie */}
             <div className="">About</div>
             <div className="">Vehicle Models</div>
             <div className="">Testimonials</div>
@@ -217,7 +223,7 @@ function App() {
       </header>
       <main className="z-10 mt-10 bg-[#FFF] dark:bg-slate-700">
         <button className="fixed bottom-0 right-0 z-30 m-10 scale-75 rounded-full bg-[#ff4d30] p-1 text-white lg:scale-100">
-          <a href="#home">
+          <a href="#navbar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
